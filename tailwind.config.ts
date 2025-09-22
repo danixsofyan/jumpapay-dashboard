@@ -2,7 +2,7 @@ import type { Config } from 'tailwindcss'
 const { fontFamily } = require('tailwindcss/defaultTheme')
 
 const config: Config = {
-  darkMode: ["class"],
+  darkMode: "class",
   content: [
     './src/pages/**/*.{ts,tsx}',
     './src/components/**/*.{ts,tsx}',
