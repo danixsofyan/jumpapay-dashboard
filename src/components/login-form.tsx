@@ -19,14 +19,10 @@ export function LoginForm({
   ...props
 }: React.ComponentProps<"div">) {
   const [showPassword, setShowPassword] = useState(false)
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState("")
   const router = useRouter()
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    setError("")
-    setLoading(true)
 
     const form = e.currentTarget as HTMLFormElement
     const email = (form.elements.namedItem("email") as HTMLInputElement).value
@@ -43,12 +39,12 @@ export function LoginForm({
         router.push("/dashboard")
       } else {
         const data = await res.json()
-        setError(data.message || "Login failed")
+        throw new Error(data.message || "Login failed")
       }
     } catch (err: any) {
-      setError("Something went wrong")
+      alert(err.message)
     } finally {
-      setLoading(false)
+      form.reset()
     }
   }
 
