@@ -19,10 +19,14 @@ export function LoginForm({
   ...props
 }: React.ComponentProps<"div">) {
   const [showPassword, setShowPassword] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState("")
   const router = useRouter()
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
+    setError("")
+    setLoading(true)
 
     const form = e.currentTarget as HTMLFormElement
     const email = (form.elements.namedItem("email") as HTMLInputElement).value
@@ -41,10 +45,14 @@ export function LoginForm({
         const data = await res.json()
         throw new Error(data.message || "Login failed")
       }
-    } catch (err: any) {
-      alert(err.message)
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message)
+      } else {
+        setError("Something went wrong")
+      }
     } finally {
-      form.reset()
+      setLoading(false)
     }
   }
 
@@ -109,8 +117,13 @@ export function LoginForm({
                     </div>
                   </div>
                   <Button type="submit" className="w-full cursor-pointer">
-                    Login
+                    {loading ? "Loading..." : "Login"}
                   </Button>
+                  {error && (
+                    <div className="text-red-500 text-sm text-center">
+                      {error}
+                    </div>
+                  )}
                 </div>
               </form>
               <div className="text-center text-sm">
