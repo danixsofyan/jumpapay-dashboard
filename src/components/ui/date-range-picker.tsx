@@ -14,25 +14,39 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 
-export function DateRangePicker({ className }: React.HTMLAttributes<HTMLDivElement>) {
+export function DateRangePicker({
+  className,
+}: React.HTMLAttributes<HTMLDivElement>) {
   const [date, setDate] = React.useState<DateRange | undefined>({
     from: subDays(new Date(), 29),
     to: new Date(),
   })
 
-  const [preset, setPreset] = React.useState<string>("Last 30 Days")
+  // preset bisa string atau undefined
+  const [preset, setPreset] = React.useState<string | undefined>(
+    "Last 30 Days"
+  )
 
   const handlePresetClick = (label: string, range: DateRange) => {
-    setPreset(label);
-    setDate(range);
-  };
+    setPreset(label)
+    setDate(range)
+  }
 
   const presets = [
     { label: "Real-time", range: { from: new Date(), to: new Date() } },
-    { label: "Yesterday", range: { from: subDays(new Date(), 1), to: subDays(new Date(), 1) } },
-    { label: "Last 7 Days", range: { from: subDays(new Date(), 6), to: new Date() } },
-    { label: "Last 30 Days", range: { from: subDays(new Date(), 29), to: new Date() } },
-  ];
+    {
+      label: "Yesterday",
+      range: { from: subDays(new Date(), 1), to: subDays(new Date(), 1) },
+    },
+    {
+      label: "Last 7 Days",
+      range: { from: subDays(new Date(), 6), to: new Date() },
+    },
+    {
+      label: "Last 30 Days",
+      range: { from: subDays(new Date(), 29), to: new Date() },
+    },
+  ]
 
   return (
     <div className={cn("grid gap-2", className)}>
@@ -63,7 +77,10 @@ export function DateRangePicker({ className }: React.HTMLAttributes<HTMLDivEleme
             )}
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="w-auto p-0 flex text-xs calendar-theme-override" align="end">
+        <PopoverContent
+          className="w-auto p-0 flex text-xs calendar-theme-override"
+          align="end"
+        >
           <div className="flex flex-col space-y-1 border-r p-2">
             {presets.map(({ label, range }) => (
               <Button
@@ -82,8 +99,8 @@ export function DateRangePicker({ className }: React.HTMLAttributes<HTMLDivEleme
             defaultMonth={date?.from}
             selected={date}
             onSelect={(range) => {
-              setPreset(undefined);
-              setDate(range);
+              setPreset(undefined)
+              setDate(range)
             }}
             numberOfMonths={1}
           />
