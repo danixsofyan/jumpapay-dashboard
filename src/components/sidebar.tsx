@@ -40,7 +40,7 @@ const Sidebar = () => {
   const logoSrc = theme === 'dark' ? "/images/logo-jumpapay.svg" : "/images/logo-jumpapay.svg";
 
   return (
-    <aside className="hidden lg:flex bg-white dark:bg-black w-24 p-6 flex-col items-center rounded-2xl sticky top-6 h-[calc(100vh-3rem)]">
+    <aside className="hidden lg:flex bg-white dark:bg-neutral-800 w-24 p-6 flex-col items-center rounded-2xl sticky top-6 h-[calc(100vh-3rem)]">
       
       <div className="mb-12">
         <Image alt="Main Logo" height={41} src={logoSrc} width={48} />
