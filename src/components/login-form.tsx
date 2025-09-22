@@ -112,7 +112,7 @@ export function LoginForm({
                       </button>
                     </div>
                   </div>
-                  <Button type="submit" className="w-full">
+                  <Button type="submit" className="w-full cursor-pointer">
                     Login
                   </Button>
                 </div>

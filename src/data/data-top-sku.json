@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Perpanjangan Pajak 1 Tahun",
+        "value": "205 Order"
+    },
+    {
+        "name": "Perpanjangan Pajak 5 Tahun",
+        "value": "81 Order"
+    },
+    {
+        "name": "Blokir",
+        "value": "16 Order"
+    },
+    {
+        "name": "Mutasi (Cabut Berkas)",
+        "value": "3 Order"
+    },
+    {
+        "name": "Balik Nama",
+        "value": "2 Order"
+    },
+    {
+        "name": "Mutasi (Submit Berkas)",
+        "value": "1 Order"
+    }
+]

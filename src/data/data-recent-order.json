@@ -1,0 +1,26 @@
+[
+    {
+        "nama": "Zahira Talla Alfania",
+        "sku": "Perpanjangan Pajak 1 Tahun",
+        "platform": "ACC One",
+        "harga": "Rp240.000"
+    },
+    {
+        "nama": "Budi Santoso",
+        "sku": "Balik Nama Kendaraan",
+        "platform": "JumpaPay.com",
+        "harga": "Rp1.500.000"
+    },
+    {
+        "nama": "Citra Lestari",
+        "sku": "Mutasi (Cabut Berkas)",
+        "platform": "GoServices",
+        "harga": "Rp750.000"
+    },
+    {
+        "nama": "Doni Firmansyah",
+        "sku": "Perpanjangan Pajak 5 Tahun",
+        "platform": "ACC One",
+        "harga": "Rp1.200.000"
+    }
+]

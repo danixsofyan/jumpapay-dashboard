@@ -1,0 +1,21 @@
+{
+  "meta": [
+    { "key": "All Platform", "color": "#8b5cf6", "total": 308 },
+    { "key": "JumpaPay.com", "color": "#22c55e", "total": 156 },
+    { "key": "GoServices", "color": "#f97316", "total": 52 },
+    { "key": "LinkAja", "color": "#ef4444", "total": 30 },
+    { "key": "Seva", "color": "#d946ef", "total": 30 },
+    { "key": "ACC", "color": "#a16207", "total": 30 },
+    { "key": "Moxa", "color": "#06b6d4", "total": 10 }
+  ],
+  "data": [
+    { "name": "Jan", "All Platform": 0, "JumpaPay.com": 0, "GoServices": 0, "LinkAja": 0, "Seva": 0, "ACC": 0, "Moxa": 0 },
+    { "name": "Feb", "All Platform": 55, "JumpaPay.com": 20, "GoServices": 30, "LinkAja": 10, "Seva": 25, "ACC": 10, "Moxa": 5 },
+    { "name": "Mar", "All Platform": 40, "JumpaPay.com": 50, "GoServices": 120, "LinkAja": 30, "Seva": 45, "ACC": 20, "Moxa": 10 },
+    { "name": "Apr", "All Platform": 85, "JumpaPay.com": 30, "GoServices": 50, "LinkAja": 20, "Seva": 35, "ACC": 30, "Moxa": 15 },
+    { "name": "Mei", "All Platform": 88, "JumpaPay.com": 20, "GoServices": 40, "LinkAja": 50, "Seva": 30, "ACC": 40, "Moxa": 5 },
+    { "name": "Jun", "All Platform": 80, "JumpaPay.com": 18, "GoServices": 50, "LinkAja": 40, "Seva": 32, "ACC": 30, "Moxa": 8 },
+    { "name": "Jul", "All Platform": 105, "JumpaPay.com": 17, "GoServices": 35, "LinkAja": 88, "Seva": 55, "ACC": 40, "Moxa": 4 },
+    { "name": "Agu", "All Platform": 5, "JumpaPay.com": 2, "GoServices": 8, "LinkAja": 5, "Seva": 4, "ACC": 3, "Moxa": 1 }
+  ]
+}

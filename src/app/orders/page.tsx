@@ -1,7 +1,7 @@
 import MobileHeader from '@/components/mobile-header';
 import Sidebar from '@/components/sidebar';
 
-export default function Settings() {
+export default function Orders() {
   return (
     <>
       <MobileHeader />
@@ -9,7 +9,7 @@ export default function Settings() {
         <div className="flex gap-6">
           <Sidebar />
           <main className="flex-1 bg-white dark:bg-neutral-800 rounded-2xl p-6">
-            <h1 className="text-3xl font-semibold mb-6 text-gray-800 dark:text-white">Settings</h1>
+            <h1 className="text-3xl font-semibold mb-6 text-gray-800 dark:text-white">Orders</h1>
           </main>
         </div>
       </div>

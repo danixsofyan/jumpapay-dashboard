@@ -1,0 +1,44 @@
+[
+    {
+        "id": "chat",
+        "icon": "solar:chat-round-line-linear",
+        "iconActive": "solar:chat-round-line-bold",
+        "label": "Chat",
+        "href": "/chat"
+    },
+    {
+        "id": "dashboard",
+        "icon": "solar:chart-square-linear",
+        "iconActive": "solar:chart-square-bold",
+        "label": "Dashboard",
+        "href": "/dashboard"
+    },
+    {
+        "id": "orders",
+        "icon": "solar:reorder-outline",
+        "iconActive": "solar:reorder-bold",
+        "label": "Orders",
+        "href": "/orders"
+    },
+    {
+        "id": "favorites",
+        "icon": "solar:star-linear",
+        "iconActive": "solar:star-bold",
+        "label": "Favorites",
+        "href": "/favorites"
+    },
+    {
+        "id": "settings",
+        "icon": "solar:settings-linear",
+        "iconActive": "solar:settings-bold",
+        "label": "Settings",
+        "href": "/settings"
+    },
+    {
+        "id": "switch",
+        "icon": "ph:user-switch-light",
+        "iconActive": "ph:user-switch-bold",
+        "label": "Switch User",
+        "href": "/switch"
+    }
+]
