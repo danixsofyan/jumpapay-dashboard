@@ -45,7 +45,7 @@ export function LoginForm({
         const data = await res.json()
         setError(data.message || "Login failed")
       }
-    } catch (err) {
+    } catch (err: any) {
       setError("Something went wrong")
     } finally {
       setLoading(false)

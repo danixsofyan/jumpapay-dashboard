@@ -11,6 +11,7 @@ import {
   CartesianGrid,
 } from "recharts";
 import { DateRangePicker } from "./ui/date-range-picker";
+import { TooltipProps } from 'recharts';
 
 interface ChartMeta {
   key: string;
@@ -20,7 +21,7 @@ interface ChartMeta {
 
 interface ChartDataItem {
   name: string;
-  [key: string]: any;
+  [key: string]: number | string;
 }
 
 interface OrderHistoryChartProps {
@@ -30,22 +31,22 @@ interface OrderHistoryChartProps {
   };
 }
 
-const CustomTooltip = ({ active, payload, label }: any) => {
+const CustomTooltip = ({ active, payload, label }: TooltipProps<number | string, string>) => {
     if (active && payload && payload.length) {
     return (
       <div className="bg-white dark:bg-neutral-800 border border-gray-200 dark:bg-neutral-800 text-black dark:text-white p-4 rounded-lg shadow-lg">
         <p className="font-bold mb-2">{label}</p>
         <div className="space-y-1">
-          {payload.map((pld: any, index: number) => (
+          {payload.map((pld, index) => (
             <div key={index} className="flex items-center justify-between text-sm">
               <div className="flex items-center">
                 <span
                   className="w-2 h-2 rounded-full mr-2"
-                  style={{ backgroundColor: pld.color }}
+                  style={{ backgroundColor: (pld.color as string) || "#888" }}
                 />
-                <span>{pld.dataKey}</span>
+                <span>{pld.dataKey ?? ""}</span>
               </div>
-              <span className="font-semibold ml-4">: {pld.value}</span>
+              <span className="font-semibold ml-4">: {pld.value ?? ""}</span>
             </div>
           ))}
         </div>
