@@ -34,7 +34,7 @@ Ensure you have the following installed:
 1.  **Clone the repository:**
 
     ```bash
-    git clone [https://github.com/danixsofyan/jumpapay-dashboard.git](https://github.com/danixsofyan/jumpapay-dashboard.git)
+    git clone https://github.com/danixsofyan/jumpapay-dashboard.git
     cd jumpapay-dashboard
     ```
 
