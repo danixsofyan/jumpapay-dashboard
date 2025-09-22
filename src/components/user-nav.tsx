@@ -63,14 +63,16 @@ const UserNav = () => {
       <AlertDialog open={open} onOpenChange={setOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>Apakah Anda yakin ingin keluar?</AlertDialogTitle>
+            <AlertDialogTitle>Are you sure you want to log out?</AlertDialogTitle>
             <AlertDialogDescription>
-              Anda akan dikembalikan ke halaman login setelah keluar.
+              You will be redirected to the login page after logging out.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel className="shadow-none">Batal</AlertDialogCancel>
-            <AlertDialogAction onClick={handleLogout} className="cursor-pointer">Keluar</AlertDialogAction>
+            <AlertDialogCancel className="shadow-none">Cancel</AlertDialogCancel>
+            <AlertDialogAction onClick={handleLogout} className="cursor-pointer">
+              Logout
+            </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
