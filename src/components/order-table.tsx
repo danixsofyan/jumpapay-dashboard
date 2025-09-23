@@ -157,36 +157,44 @@ const OrderTable: FC<OrderTableProps> = ({ orders }) => {
   }, [totalPages, currentPage]);
 
   return (
-    <div className="bg-white dark:bg-neutral-800/50 p-6 rounded-xl border border-gray-200 dark:border-neutral-700/50">
-      <div className="flex border-b border-gray-200 dark:border-neutral-700">
-        {TABS.map(tab => (
-          <button
-            key={tab}
-            onClick={() => setActiveTab(tab)}
-            className={`w-[183.33px] h-[50px] py-4 flex items-center justify-center text-sm font-semibold transition-colors duration-200 cursor-pointer ${
-              activeTab === tab
-                ? 'border-b border-primary text-primary'
-                : 'border-b border-transparent text-gray-400 hover:text-gray-600 dark:text-neutral-500 dark:hover:text-neutral-300'
-            }`}
-          >
-            {tab}
-          </button>
-        ))}
+    <div className="bg-white dark:bg-neutral-800/50 rounded-xl border border-gray-200 dark:border-neutral-700/50">
+      <div className="p-6">
+        <div className="flex border-b border-gray-200 dark:border-neutral-700">
+          {TABS.map(tab => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`w-[183.33px] h-[50px] py-4 flex items-center justify-center text-sm font-semibold transition-colors duration-200 cursor-pointer ${
+                activeTab === tab
+                  ? 'border-b border-primary text-primary'
+                  : 'border-b border-transparent text-gray-400 hover:text-gray-600 dark:text-neutral-500 dark:hover:text-neutral-300'
+              }`}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
+
+        <OrderTableFilters 
+          searchQuery={searchQuery}
+          setSearchQuery={setSearchQuery}
+          onExport={handleExport}
+        />
       </div>
 
-      <OrderTableFilters 
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
-        onExport={handleExport}
-      />
-
       <div className="overflow-x-auto">
-        <table className="w-full text-sm text-left text-gray-500 dark:text-neutral-400">
+        <table className="w-full text-sm text-left text-gray-500 dark:text-neutral-400 table-fixed">
           <thead className="text-xs text-gray-700 dark:text-neutral-300 bg-gray-50 dark:bg-neutral-800">
             <tr>
-              {['Tanggal', 'Nama', 'Layanan', 'No. HP', 'Kota', 'Status Pembayaran', 'Platform', 'Harga', 'Aksi'].map(header => (
-                <th key={header} scope="col" className="px-6 py-3 font-semibold">{header}</th>
-              ))}
+              <th scope="col" className="px-2 py-3 font-semibold w-1/4 sm:px-6">Tgl.</th>
+              <th scope="col" className="px-2 py-3 font-semibold w-1/4 sm:px-6">Nama</th>
+              <th scope="col" className="px-2 py-3 font-semibold w-1/4 sm:px-6">Layanan</th>
+              <th scope="col" className="px-6 py-3 font-semibold hidden md:table-cell">No. HP</th>
+              <th scope="col" className="px-6 py-3 font-semibold hidden md:table-cell">Kota</th>
+              <th scope="col" className="px-6 py-3 font-semibold hidden md:table-cell">Status Pembayaran</th>
+              <th scope="col" className="px-6 py-3 font-semibold hidden md:table-cell">Platform</th>
+              <th scope="col" className="px-6 py-3 font-semibold hidden md:table-cell">Harga</th>
+              <th scope="col" className="px-2 py-3 font-semibold w-1/4 sm:px-6 text-center">Aksi</th>
             </tr>
           </thead>
           <tbody>
@@ -204,62 +212,63 @@ const OrderTable: FC<OrderTableProps> = ({ orders }) => {
         </table>
       </div>
 
-      {/* Pagination Controls */}
       {totalItems > 0 && (
-        <div className="flex flex-col sm:flex-row items-center justify-between mt-6">
-          <div className="flex items-center gap-2 mb-4 sm:mb-0">
-            <span className="text-sm text-gray-500 dark:text-neutral-400">Baris per halaman</span>
-            <div className="relative">
-              <select
-                value={itemsPerPage}
-                onChange={handleItemsPerPageChange}
-                className="w-[110px] h-[36px] appearance-none cursor-pointer rounded-lg border border-gray-300 dark:border-neutral-600 bg-white dark:bg-neutral-900 pl-4 pr-8 text-xs font-semibold text-gray-800 dark:text-white"
-              >
-                <option value={5}>5 Baris</option>
-                <option value={10}>10 Baris</option>
-                <option value={20}>20 Baris</option>
-                <option value={50}>50 Baris</option>
-              </select>
-              <span className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500">
-                <ChevronDown size={16} />
-              </span>
-            </div>
-          </div>
-          <div className="flex items-center gap-4">
-            <span className="text-sm text-gray-500 dark:text-neutral-400">
-              {startIndex + 1}-{endIndex} dari {totalItems} data
-            </span>
-            <div className="flex items-center gap-1">
-              <button
-                onClick={() => handlePageChange(currentPage - 1)}
-                disabled={currentPage === 1}
-                className="w-8 h-8 flex items-center justify-center rounded-lg disabled:opacity-50 disabled:cursor-not-allowed text-gray-500 dark:text-neutral-400 hover:bg-gray-100 dark:hover:bg-neutral-700 transition-colors duration-200"
-              >
-                <ChevronLeft size={20} />
-              </button>
-              {visiblePages.map((page, index) => (
-                <button
-                  key={index}
-                  onClick={() => typeof page === 'number' && handlePageChange(page)}
-                  disabled={typeof page !== 'number'}
-                  className={`w-8 h-8 flex items-center justify-center rounded-lg text-sm font-medium transition-colors duration-200 ${
-                    typeof page === 'number'
-                      ? currentPage === page
-                        ? 'bg-blue-100 text-primary dark:bg-blue-900/50 dark:text-white'
-                        : 'bg-white text-gray-800 dark:bg-neutral-800 dark:text-white hover:bg-gray-100 dark:hover:bg-neutral-700'
-                      : 'cursor-default text-gray-500 dark:text-neutral-400'
-                  }`}
+        <div className="p-6">
+          <div className="flex flex-col sm:flex-row items-center justify-between mt-6">
+            <div className="flex items-center gap-2 mb-4 sm:mb-0">
+              <span className="text-sm text-gray-500 dark:text-neutral-400">Baris per halaman</span>
+              <div className="relative">
+                <select
+                  value={itemsPerPage}
+                  onChange={handleItemsPerPageChange}
+                  className="w-[110px] h-[36px] appearance-none cursor-pointer rounded-lg border border-gray-300 dark:border-neutral-600 bg-white dark:bg-neutral-900 pl-4 pr-8 text-xs font-semibold text-gray-800 dark:text-white"
                 >
-                  {page}
+                  <option value={5}>5 Baris</option>
+                  <option value={10}>10 Baris</option>
+                  <option value={20}>20 Baris</option>
+                  <option value={50}>50 Baris</option>
+                </select>
+                <span className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500">
+                  <ChevronDown size={16} />
+                </span>
+              </div>
+            </div>
+            <div className="flex items-center gap-4">
+              <span className="text-sm text-gray-500 dark:text-neutral-400">
+                {startIndex + 1}-{endIndex} dari {totalItems} data
+              </span>
+              <div className="flex items-center gap-1">
+                <button
+                  onClick={() => handlePageChange(currentPage - 1)}
+                  disabled={currentPage === 1}
+                  className="w-8 h-8 flex items-center justify-center rounded-lg disabled:opacity-50 disabled:cursor-not-allowed text-gray-500 dark:text-neutral-400 hover:bg-gray-100 dark:hover:bg-neutral-700 transition-colors duration-200"
+                >
+                  <ChevronLeft size={20} />
                 </button>
-              ))}
-              <button
-                onClick={() => handlePageChange(currentPage + 1)}
-                disabled={currentPage === totalPages}
-                className="w-8 h-8 flex items-center justify-center rounded-lg disabled:opacity-50 disabled:cursor-not-allowed text-gray-500 dark:text-neutral-400 hover:bg-gray-100 dark:hover:bg-neutral-700 transition-colors duration-200"
-              >
-                <ChevronRight size={20} />
-              </button>
+                {visiblePages.map((page, index) => (
+                  <button
+                    key={index}
+                    onClick={() => typeof page === 'number' && handlePageChange(page)}
+                    disabled={typeof page !== 'number'}
+                    className={`w-8 h-8 flex items-center justify-center rounded-lg text-sm font-medium transition-colors duration-200 ${
+                      typeof page === 'number'
+                        ? currentPage === page
+                          ? 'bg-blue-100 text-primary dark:bg-blue-900/50 dark:text-white'
+                          : 'bg-white text-gray-800 dark:bg-neutral-800 dark:text-white hover:bg-gray-100 dark:hover:bg-neutral-700'
+                        : 'cursor-default text-gray-500 dark:text-neutral-400'
+                    }`}
+                  >
+                    {page}
+                  </button>
+                ))}
+                <button
+                  onClick={() => handlePageChange(currentPage + 1)}
+                  disabled={currentPage === totalPages}
+                  className="w-8 h-8 flex items-center justify-center rounded-lg disabled:opacity-50 disabled:cursor-not-allowed text-gray-500 dark:text-neutral-400 hover:bg-gray-100 dark:hover:bg-neutral-700 transition-colors duration-200"
+                >
+                  <ChevronRight size={20} />
+                </button>
+              </div>
             </div>
           </div>
         </div>
