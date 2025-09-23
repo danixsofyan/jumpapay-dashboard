@@ -270,8 +270,8 @@ const OrderDetail: FC<OrderDetailProps> = ({ order, title }) => {
             </div>
 
             <div className="flex justify-between items-center dark:border-neutral-700 pt-4 mt-6 bg-gray-50 dark:bg-neutral-800/50 p-6 rounded-xl border">
-                <p className="text-base font-semibold text-gray-900 dark:text-neutral-100">Total Biaya Pajak (PKB) + Biaya Jasa Jumpapay</p>
-                <p className="text-xl font-bold" style={{ color: '#3892E4' }}>{formatPrice(order.harga)}</p>
+                <p className="text-xs sm:text-base font-semibold text-gray-900 dark:text-neutral-100">Total Biaya Pajak (PKB) + <br/> Biaya Jasa Jumpapay</p>
+                <p className="text-sm sm:text-xl font-bold" style={{ color: '#3892E4' }}>{formatPrice(order.harga)}</p>
             </div>
         </div>
     );
