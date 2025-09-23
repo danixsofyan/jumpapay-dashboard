@@ -8,9 +8,9 @@ import OrderTable from '@/components/order-table';
 interface Stat { id: string; label: string; value: string; icon: string; }
 interface OrderListItem { label: string; value: string; }
 interface Order { id: number; tanggal: string; nama: string; layanan: string; no_hp: string; kota: string; status_pembayaran: 'Belum Bayar' | 'Sudah Bayar' | 'Sedang Diproses' | 'Selesai'; platform: string; harga: string; }
-interface OrderB2CProps { data: { summary_stats: Stat[]; list_order: OrderListItem[]; orders: Order[]; }; }
+interface OrderB2BProps { data: { summary_stats: Stat[]; list_order: OrderListItem[]; orders: Order[]; }; }
 
-const OrderB2C: FC<OrderB2CProps> = ({ data }) => {
+const OrderB2B: FC<OrderB2BProps> = ({ data }) => {
   const listOrderData = (data?.list_order || []).map(item => ({
     name: item.label,
     value: item.value,
@@ -37,9 +37,9 @@ const OrderB2C: FC<OrderB2CProps> = ({ data }) => {
         />
       </div>
 
-      <OrderTable orders={data?.orders} variant="b2c"/>
+      <OrderTable orders={data?.orders} variant="b2b" />
     </div>
   );
 };
 
-export default OrderB2C;
+export default OrderB2B;

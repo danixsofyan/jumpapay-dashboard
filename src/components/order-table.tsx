@@ -11,42 +11,63 @@ import autoTable from 'jspdf-autotable';
 
 interface OrderTableProps {
   orders: Order[];
+  variant: 'b2c' | 'b2b';
 }
 
-const OrderTable: FC<OrderTableProps> = ({ orders }) => {
-  const [activeTab, setActiveTab] = useState('Belum Bayar');
+const OrderTable: FC<OrderTableProps> = ({ orders, variant }) => {
+  const [activeTab, setActiveTab] = useState(variant === 'b2b' ? 'Invoicing' : 'Belum Bayar');
+  const [activeSubTab, setActiveSubTab] = useState('Order Masuk');
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(10);
   const [searchQuery, setSearchQuery] = useState('');
-  
-  const TABS = ['Belum Bayar', 'Sedang Diproses', 'Selesai'];
-  const statusMap: { [key: string]: OrderStatus[] } = {
-    'Belum Bayar': ['Belum Bayar'],
-    'Sedang Diproses': ['Sedang Diproses', 'Sudah Bayar'],
-    'Selesai': ['Selesai'],
-  };
+
+  const MAIN_TABS = ['Invoicing', 'Non Invoicing'];
+  const SUB_TABS = useMemo(() => {
+    return variant === 'b2b'
+      ? ['Order Masuk', 'Shopping Bag', 'Live Order', 'Menunggu Pembayaran', 'Selesai', 'Cancel Order']
+      : ['Belum Bayar', 'Sedang Diproses', 'Selesai'];
+  }, [variant]);
+
+  const statusMap: { [key: string]: OrderStatus[] } = useMemo(() => {
+    if (variant === 'b2b') {
+      return {
+        'Order Masuk': ['Perlu Verifikasi', 'Konfirmasi ETLE', 'Konfirmasi Alamat'],
+        'Shopping Bag': ['Sedang Diproses'],
+        'Live Order': ['Sudah Bayar'],
+        'Menunggu Pembayaran': ['Menunggu Pembayaran'],
+        'Selesai': ['Selesai'],
+        'Cancel Order': ['Dibatalkan'],
+      };
+    }
+    return {
+      'Belum Bayar': ['Belum Bayar'],
+      'Sedang Diproses': ['Sedang Diproses', 'Sudah Bayar'],
+      'Selesai': ['Selesai'],
+    };
+  }, [variant]);
 
   const safeOrders = orders || [];
-  
+
   const filteredOrders = safeOrders
     .filter(order => {
-        const query = searchQuery.toLowerCase();
-        return (
-            order.nama.toLowerCase().includes(query) ||
-            order.layanan.toLowerCase().includes(query) ||
-            order.no_hp.toLowerCase().includes(query) ||
-            order.kota.toLowerCase().includes(query) ||
-            order.platform.toLowerCase().includes(query)
-        );
+      const query = searchQuery.toLowerCase();
+      return (
+        order.nama.toLowerCase().includes(query) ||
+        order.layanan.toLowerCase().includes(query) ||
+        order.no_hp.toLowerCase().includes(query) ||
+        order.kota.toLowerCase().includes(query) ||
+        order.platform.toLowerCase().includes(query)
+      );
     })
     .filter(order => {
-        const validStatuses = statusMap[activeTab];
-        return validStatuses ? validStatuses.includes(order.status_pembayaran) : false;
+      const currentStatusMap = variant === 'b2b' ? statusMap[activeSubTab] : statusMap[activeTab];
+      const orderStatusField = variant === 'b2b' ? order.status_b2b : order.status_pembayaran;
+      return currentStatusMap ? currentStatusMap.includes(orderStatusField) : false;
     });
 
   const totalItems = filteredOrders.length;
   const totalPages = Math.ceil(totalItems / itemsPerPage);
-  
+
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = Math.min(startIndex + itemsPerPage, totalItems);
   const paginatedOrders = filteredOrders.slice(startIndex, endIndex);
@@ -66,27 +87,19 @@ const OrderTable: FC<OrderTableProps> = ({ orders }) => {
       return;
     }
 
-    const headers = [
-      "Tanggal", "Nama", "Layanan", "No. HP", "Kota", 
-      "Status Pembayaran", "Platform", "Harga"
-    ];
+    const headers = variant === 'b2c'
+      ? ["Tanggal", "Nama", "Layanan", "No. HP", "Kota", "Status Pembayaran", "Platform", "Harga"]
+      : ["Tanggal", "Nama", "Layanan", "No. HP", "Kota", "Platform", "Harga", "Status"];
 
-    const data = filteredOrders.map(order => [
-      order.tanggal,
-      order.nama,
-      order.layanan,
-      order.no_hp,
-      order.kota,
-      order.status_pembayaran,
-      order.platform,
-      order.harga,
-    ]);
+    const data = filteredOrders.map(order => variant === 'b2c'
+      ? [order.tanggal, order.nama, order.layanan, order.no_hp, order.kota, order.status_pembayaran, order.platform, order.harga]
+      : [order.tanggal, order.nama, order.layanan, order.no_hp, order.kota, order.platform, order.harga, order.status_b2b]);
 
     if (format === 'csv') {
-      const csvContent = "data:text/csv;charset=utf-8," 
-        + headers.join(",") + "\n" 
+      const csvContent = "data:text/csv;charset=utf-8,"
+        + headers.join(",") + "\n"
         + data.map(row => row.map(cell => `"${cell}"`).join(",")).join("\n");
-      
+
       const encodedUri = encodeURI(csvContent);
       const link = document.createElement("a");
       link.setAttribute("href", encodedUri);
@@ -99,7 +112,7 @@ const OrderTable: FC<OrderTableProps> = ({ orders }) => {
       const doc = new jsPDF();
       doc.setFontSize(18);
       doc.text("Laporan Data Pesanan", 14, 22);
-      
+
       autoTable(doc, {
         head: [headers],
         body: data,
@@ -115,15 +128,15 @@ const OrderTable: FC<OrderTableProps> = ({ orders }) => {
         },
         theme: 'striped',
       });
-      
+
       doc.save("data-pesanan.pdf");
     }
-  }, [filteredOrders]);
+  }, [filteredOrders, variant]);
 
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [activeTab, searchQuery]);
+  }, [activeTab, activeSubTab, searchQuery]);
 
   const visiblePages = useMemo(() => {
     const pages: (number | string)[] = [];
@@ -156,29 +169,92 @@ const OrderTable: FC<OrderTableProps> = ({ orders }) => {
     return pages;
   }, [totalPages, currentPage]);
 
+  const tableHeaders = useMemo(() => {
+    if (variant === 'b2c') {
+      return [
+        { label: 'Tanggal', className: 'px-2 py-3 font-semibold sm:px-6' },
+        { label: 'Nama', className: 'px-2 py-3 font-semibold sm:px-6' },
+        { label: 'Layanan', className: 'px-2 py-3 font-semibold sm:px-6' },
+        { label: 'No. HP', className: 'px-6 py-3 font-semibold hidden md:table-cell' },
+        { label: 'Kota', className: 'px-6 py-3 font-semibold hidden md:table-cell' },
+        { label: 'Status Pembayaran', className: 'px-6 py-3 font-semibold hidden md:table-cell' },
+        { label: 'Platform', className: 'px-6 py-3 font-semibold hidden md:table-cell' },
+        { label: 'Harga', className: 'px-6 py-3 font-semibold hidden md:table-cell' },
+      ];
+    }
+    return [
+      { label: '', className: 'px-2 py-3 font-semibold sm:px-6 w-10 hidden md:table-cell' }, // Checkbox
+      { label: 'Tanggal', className: 'px-2 py-3 font-semibold sm:px-6' },
+      { label: 'Nama', className: 'px-2 py-3 font-semibold sm:px-6' },
+      { label: 'Layanan', className: 'px-2 py-3 font-semibold sm:px-6' },
+      { label: 'No. HP', className: 'px-6 py-3 font-semibold hidden md:table-cell' },
+      { label: 'Kota', className: 'px-6 py-3 font-semibold hidden md:table-cell' },
+      { label: 'Platform', className: 'px-6 py-3 font-semibold hidden lg:table-cell' },
+      { label: 'Harga', className: 'px-6 py-3 font-semibold hidden xl:table-cell' },
+      { label: 'Status', className: 'px-6 py-3 font-semibold hidden md:table-cell' },
+    ];
+  }, [variant]);
+
   return (
     <div className="bg-white dark:bg-neutral-800/50 rounded-xl border border-gray-200 dark:border-neutral-700/50">
       <div className="p-6">
-        <div className="flex border-b border-gray-200 dark:border-neutral-700">
-          {TABS.map(tab => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              className={`w-[183.33px] h-[50px] py-4 flex items-center justify-center text-sm font-semibold transition-colors duration-200 cursor-pointer ${
-                activeTab === tab
-                  ? 'border-b border-primary text-primary'
-                  : 'border-b border-transparent text-gray-400 hover:text-gray-600 dark:text-neutral-500 dark:hover:text-neutral-300'
-              }`}
-            >
-              {tab}
-            </button>
-          ))}
-        </div>
+        {variant === 'b2b' && (
+          <div className="flex border-b border-gray-200 dark:border-neutral-700 mb-4">
+            {MAIN_TABS.map(tab => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                className={`h-[50px] py-4 px-6 flex items-center justify-center text-sm font-semibold transition-colors duration-200 cursor-pointer ${
+                  activeTab === tab
+                    ? 'border-b border-primary text-primary'
+                    : 'border-b border-transparent text-gray-400 hover:text-gray-600 dark:text-neutral-500 dark:hover:text-neutral-300'
+                }`}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
+        )}
 
-        <OrderTableFilters 
+        {variant === 'b2b' ? (
+          <div className="flex gap-2 mb-4 overflow-x-auto whitespace-nowrap scrollbar-hide">
+            {SUB_TABS.map(tab => (
+              <button
+                key={tab}
+                onClick={() => setActiveSubTab(tab)}
+                className={`py-2 px-4 rounded-lg text-sm font-semibold transition-colors duration-200 cursor-pointer flex-shrink-0 ${
+                  activeSubTab === tab
+                    ? 'bg-[#E0F6FF] text-[#69C5EB]'
+                    : 'bg-transparent text-gray-500 hover:bg-gray-100 dark:hover:bg-neutral-700 dark:text-neutral-400'
+                }`}
+              >
+                {tab}
+            </button>
+            ))}
+          </div>
+        ) : (
+          <div className="flex border-b border-gray-200 dark:border-neutral-700">
+            {SUB_TABS.map(tab => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                className={`w-[183.33px] h-[50px] py-4 flex items-center justify-center text-sm font-semibold transition-colors duration-200 cursor-pointer ${
+                  activeTab === tab
+                    ? 'border-b border-primary text-primary'
+                    : 'border-b border-transparent text-gray-400 hover:text-gray-600 dark:text-neutral-500 dark:hover:text-neutral-300'
+                }`}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
+        )}
+
+        <OrderTableFilters
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
           onExport={handleExport}
+          variant={variant}
         />
       </div>
 
@@ -186,27 +262,28 @@ const OrderTable: FC<OrderTableProps> = ({ orders }) => {
         <table className="w-full text-sm text-left text-gray-500 dark:text-neutral-400 table-fixed">
           <thead className="text-xs text-gray-700 dark:text-neutral-300 bg-gray-50 dark:bg-neutral-800">
             <tr>
-              <th scope="col" className="px-2 py-3 font-semibold sm:px-6">
-                <span className="hidden sm:inline">Tanggal</span>
-                <span className="sm:hidden">Tgl.</span>
-              </th>
-              <th scope="col" className="px-2 py-3 font-semibold sm:px-6">Nama</th>
-              <th scope="col" className="px-2 py-3 font-semibold sm:px-6">Layanan</th>
-              <th scope="col" className="px-6 py-3 font-semibold hidden md:table-cell">No. HP</th>
-              <th scope="col" className="px-6 py-3 font-semibold hidden md:table-cell">Kota</th>
-              <th scope="col" className="px-6 py-3 font-semibold hidden md:table-cell">Status Pembayaran</th>
-              <th scope="col" className="px-6 py-3 font-semibold hidden md:table-cell">Platform</th>
-              <th scope="col" className="px-6 py-3 font-semibold hidden md:table-cell">Harga</th>
+              {tableHeaders.map((header, index) => (
+                <th key={index} scope="col" className={header.className}>
+                  {header.label === 'Tanggal' ? (
+                    <>
+                      <span className="hidden sm:inline">Tanggal</span>
+                      <span className="sm:hidden">Tgl.</span>
+                    </>
+                  ) : (
+                    header.label
+                  )}
+                </th>
+              ))}
               <th scope="col" className="px-2 py-3 font-semibold sm:px-6 text-center">Aksi</th>
             </tr>
           </thead>
           <tbody>
             {paginatedOrders.map(order => (
-              <OrderTableRow key={order.id} order={order} />
+              <OrderTableRow key={order.id} order={order} variant={variant} />
             ))}
             {paginatedOrders.length === 0 && (
               <tr>
-                <td colSpan={9} className="py-8 text-center text-gray-500 dark:text-neutral-400">
+                <td colSpan={tableHeaders.length + 1} className="py-8 text-center text-gray-500 dark:text-neutral-400">
                   Tidak ada data yang ditemukan.
                 </td>
               </tr>

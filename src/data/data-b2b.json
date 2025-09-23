@@ -1,0 +1,190 @@
+{
+  "summary_stats": [
+    {
+      "id": "total_order",
+      "label": "Total Order",
+      "value": "1234",
+      "icon": "mdi:package-variant-closed"
+    },
+    {
+      "id": "motor",
+      "label": "Motor",
+      "value": "1234",
+      "icon": "mdi:moped"
+    },
+    {
+      "id": "mobil",
+      "label": "Mobil",
+      "value": "1234",
+      "icon": "mdi:car"
+    },
+    {
+      "id": "biaya_administrasi",
+      "label": "Biaya Administrasi",
+      "value": "Rp1.345.000",
+      "icon": "mdi:file-document-plus-outline"
+    },
+    {
+      "id": "jasa_jumpapay",
+      "label": "Jasa Jumpapay",
+      "value": "Rp1.345.000",
+      "icon": "mdi:wallet-outline"
+    },
+    {
+      "id": "delivery_fee",
+      "label": "Delivery Fee",
+      "value": "Rp1.345.000",
+      "icon": "mdi:truck-outline"
+    },
+    {
+      "id": "total_gmv",
+      "label": "Total GMV",
+      "value": "Rp1.345.000",
+      "icon": "mdi:chart-line"
+    },
+    {
+      "id": "total_pajak",
+      "label": "Total Pajak",
+      "value": "Rp1.345.000",
+      "icon": "mdi:receipt-text-outline"
+    }
+  ],
+  "list_order": [
+    {
+      "label": "Perpanjangan Pajak 1 Tahun",
+      "value": "205 Order"
+    },
+    {
+      "label": "Perpanjangan Pajak 5 Tahun",
+      "value": "205 Order"
+    },
+    {
+      "label": "Blokir",
+      "value": "205 Order"
+    },
+    {
+      "label": "Mutasi (Cabut Berkas)",
+      "value": "205 Order"
+    },
+    {
+      "label": "Balik Nama",
+      "value": "205 Order"
+    },
+    {
+      "label": "Mutasi (Submit Berkas)",
+      "value": "205 Order"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "tanggal": "11/07/2025",
+      "nama": "Kaiden Break",
+      "layanan": "Perpanjangan Pajak 1 Tahun",
+      "no_hp": "08111111231",
+      "kota": "Tangerang",
+      "platform": "Seva",
+      "harga": "Rp240.000",
+      "status_b2b": "Konfirmasi STNK"
+    },
+    {
+      "id": 2,
+      "tanggal": "11/07/2025",
+      "nama": "Alya",
+      "layanan": "Perpanjangan Pajak 1 Tahun",
+      "no_hp": "08111111231",
+      "kota": "Tangerang",
+      "platform": "Seva",
+      "harga": "Rp240.000",
+      "status_b2b": "Konfirmasi Alamat"
+    },
+    {
+      "id": 3,
+      "tanggal": "11/07/2025",
+      "nama": "Tania",
+      "layanan": "Perpanjangan Pajak 1 Tahun",
+      "no_hp": "08111111231",
+      "kota": "Tangerang",
+      "platform": "Seva",
+      "harga": "Rp240.000",
+      "status_b2b": "Perlu Verifikasi"
+    },
+    {
+      "id": 4,
+      "tanggal": "11/07/2025",
+      "nama": "Kartini",
+      "layanan": "Perpanjangan Pajak 1 Tahun",
+      "no_hp": "08111111231",
+      "kota": "Tangerang",
+      "platform": "Seva",
+      "harga": "Rp240.000",
+      "status_b2b": "Perlu Verifikasi"
+    },
+    {
+      "id": 5,
+      "tanggal": "11/07/2025",
+      "nama": "Joshua",
+      "layanan": "Perpanjangan Pajak 1 Tahun",
+      "no_hp": "08111111231",
+      "kota": "Tangerang",
+      "platform": "Seva",
+      "harga": "Rp240.000",
+      "status_b2b": "Perlu Verifikasi"
+    },
+    {
+      "id": 6,
+      "tanggal": "11/07/2025",
+      "nama": "Miguel",
+      "layanan": "Perpanjangan Pajak 1 Tahun",
+      "no_hp": "08111111231",
+      "kota": "Tangerang",
+      "platform": "Seva",
+      "harga": "Rp240.000",
+      "status_b2b": "Perlu Verifikasi"
+    },
+    {
+      "id": 7,
+      "tanggal": "11/07/2025",
+      "nama": "Adam",
+      "layanan": "Perpanjangan Pajak 1 Tahun",
+      "no_hp": "08111111231",
+      "kota": "Tangerang",
+      "platform": "Seva",
+      "harga": "Rp240.000",
+      "status_b2b": "Perlu Verifikasi"
+    },
+    {
+      "id": 8,
+      "tanggal": "11/07/2025",
+      "nama": "Wono",
+      "layanan": "Perpanjangan Pajak 1 Tahun",
+      "no_hp": "08111111231",
+      "kota": "Tangerang",
+      "platform": "Seva",
+      "harga": "Rp240.000",
+      "status_b2b": "Perlu Verifikasi"
+    },
+    {
+      "id": 9,
+      "tanggal": "11/07/2025",
+      "nama": "Deka",
+      "layanan": "Perpanjangan Pajak 1 Tahun",
+      "no_hp": "08111111231",
+      "kota": "Tangerang",
+      "platform": "Seva",
+      "harga": "Rp240.000",
+      "status_b2b": "Perlu Verifikasi"
+    },
+    {
+      "id": 10,
+      "tanggal": "11/07/2025",
+      "nama": "Kania Puti",
+      "layanan": "Perpanjangan Pajak 1 Tahun",
+      "no_hp": "08111111231",
+      "kota": "Tangerang",
+      "platform": "Seva",
+      "harga": "Rp240.000",
+      "status_b2b": "Perlu Verifikasi"
+    }
+  ]
+}
