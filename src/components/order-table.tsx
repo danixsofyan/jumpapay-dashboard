@@ -109,7 +109,7 @@ const OrderTable: FC<OrderTableProps> = ({ orders }) => {
           cellPadding: 2
         },
         headStyles: {
-          fillColor: [30, 41, 59], // dark-gray
+          fillColor: [30, 41, 59],
           textColor: [255, 255, 255],
           fontStyle: 'bold'
         },
@@ -186,15 +186,18 @@ const OrderTable: FC<OrderTableProps> = ({ orders }) => {
         <table className="w-full text-sm text-left text-gray-500 dark:text-neutral-400 table-fixed">
           <thead className="text-xs text-gray-700 dark:text-neutral-300 bg-gray-50 dark:bg-neutral-800">
             <tr>
-              <th scope="col" className="px-2 py-3 font-semibold w-1/4 sm:px-6">Tgl.</th>
-              <th scope="col" className="px-2 py-3 font-semibold w-1/4 sm:px-6">Nama</th>
-              <th scope="col" className="px-2 py-3 font-semibold w-1/4 sm:px-6">Layanan</th>
+              <th scope="col" className="px-2 py-3 font-semibold sm:px-6">
+                <span className="hidden sm:inline">Tanggal</span>
+                <span className="sm:hidden">Tgl.</span>
+              </th>
+              <th scope="col" className="px-2 py-3 font-semibold sm:px-6">Nama</th>
+              <th scope="col" className="px-2 py-3 font-semibold sm:px-6">Layanan</th>
               <th scope="col" className="px-6 py-3 font-semibold hidden md:table-cell">No. HP</th>
               <th scope="col" className="px-6 py-3 font-semibold hidden md:table-cell">Kota</th>
               <th scope="col" className="px-6 py-3 font-semibold hidden md:table-cell">Status Pembayaran</th>
               <th scope="col" className="px-6 py-3 font-semibold hidden md:table-cell">Platform</th>
               <th scope="col" className="px-6 py-3 font-semibold hidden md:table-cell">Harga</th>
-              <th scope="col" className="px-2 py-3 font-semibold w-1/4 sm:px-6 text-center">Aksi</th>
+              <th scope="col" className="px-2 py-3 font-semibold sm:px-6 text-center">Aksi</th>
             </tr>
           </thead>
           <tbody>
