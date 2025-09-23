@@ -26,23 +26,21 @@ export default function DetailOrderPage({ params }: DetailOrderPageProps) {
     <>
       <MobileHeader />
       <div className="bg-gray-100 dark:bg-neutral-950 min-h-screen">
-        <div className="p-4 lg:p-6">
-          <div className="flex gap-6">
-            <Sidebar />
-            <main className="flex-1">
-                <OrderDetail
-                    order={{
-                        ...order,
-                        status_pembayaran: order.status_pembayaran as
-                        | "Belum Bayar"
-                        | "Sudah Bayar"
-                        | "Sedang Diproses"
-                        | "Selesai",
-                    }}
-                    title="Detail Order B2C" // Teruskan judul yang diinginkan di sini
-                />
-            </main>
-          </div>
+        <div className="p-4 lg:p-6 flex flex-col lg:flex-row gap-6">
+          <Sidebar />
+          <main className="w-full">
+              <OrderDetail
+                  order={{
+                      ...order,
+                      status_pembayaran: order.status_pembayaran as
+                      | "Belum Bayar"
+                      | "Sudah Bayar"
+                      | "Sedang Diproses"
+                      | "Selesai",
+                  }}
+                  title="Detail Order B2C"
+              />
+          </main>
         </div>
       </div>
     </>
