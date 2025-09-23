@@ -1,11 +1,13 @@
 'use client';
 
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useCallback } from 'react';
 import type { FC } from 'react';
 import type { Order, OrderStatus } from '@/types/order-types';
 import OrderTableFilters from './order-table-filters';
 import OrderTableRow from './order-table-row';
 import { ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
+import jsPDF from 'jspdf';
+import autoTable from 'jspdf-autotable';
 
 interface OrderTableProps {
   orders: Order[];
@@ -25,7 +27,6 @@ const OrderTable: FC<OrderTableProps> = ({ orders }) => {
   };
 
   const safeOrders = orders || [];
-  
   
   const filteredOrders = safeOrders
     .filter(order => {
@@ -59,10 +60,70 @@ const OrderTable: FC<OrderTableProps> = ({ orders }) => {
     setCurrentPage(1);
   };
 
+  const handleExport = useCallback((format: 'csv' | 'pdf') => {
+    if (!filteredOrders || filteredOrders.length === 0) {
+      alert("Tidak ada data untuk diekspor.");
+      return;
+    }
+
+    const headers = [
+      "Tanggal", "Nama", "Layanan", "No. HP", "Kota", 
+      "Status Pembayaran", "Platform", "Harga"
+    ];
+
+    const data = filteredOrders.map(order => [
+      order.tanggal,
+      order.nama,
+      order.layanan,
+      order.no_hp,
+      order.kota,
+      order.status_pembayaran,
+      order.platform,
+      order.harga,
+    ]);
+
+    if (format === 'csv') {
+      const csvContent = "data:text/csv;charset=utf-8," 
+        + headers.join(",") + "\n" 
+        + data.map(row => row.map(cell => `"${cell}"`).join(",")).join("\n");
+      
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", "data-pesanan.csv");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+    } else if (format === 'pdf') {
+      const doc = new jsPDF();
+      doc.setFontSize(18);
+      doc.text("Laporan Data Pesanan", 14, 22);
+      
+      autoTable(doc, {
+        head: [headers],
+        body: data,
+        startY: 30,
+        styles: {
+          fontSize: 8,
+          cellPadding: 2
+        },
+        headStyles: {
+          fillColor: [30, 41, 59], // dark-gray
+          textColor: [255, 255, 255],
+          fontStyle: 'bold'
+        },
+        theme: 'striped',
+      });
+      
+      doc.save("data-pesanan.pdf");
+    }
+  }, [filteredOrders]);
+
+
   useEffect(() => {
     setCurrentPage(1);
   }, [activeTab, searchQuery]);
-
 
   const visiblePages = useMemo(() => {
     const pages: (number | string)[] = [];
@@ -116,6 +177,7 @@ const OrderTable: FC<OrderTableProps> = ({ orders }) => {
       <OrderTableFilters 
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
+        onExport={handleExport}
       />
 
       <div className="overflow-x-auto">
