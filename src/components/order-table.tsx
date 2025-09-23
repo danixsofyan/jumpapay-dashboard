@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import type { FC } from 'react';
 import type { Order, OrderStatus } from '@/types/order-types';
 import OrderTableFilters from './order-table-filters';
@@ -15,6 +15,7 @@ const OrderTable: FC<OrderTableProps> = ({ orders }) => {
   const [activeTab, setActiveTab] = useState('Belum Bayar');
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(10);
+  const [searchQuery, setSearchQuery] = useState('');
   
   const TABS = ['Belum Bayar', 'Sedang Diproses', 'Selesai'];
   const statusMap: { [key: string]: OrderStatus[] } = {
@@ -24,10 +25,23 @@ const OrderTable: FC<OrderTableProps> = ({ orders }) => {
   };
 
   const safeOrders = orders || [];
-  const filteredOrders = safeOrders.filter(order => {
-    const validStatuses = statusMap[activeTab];
-    return validStatuses ? validStatuses.includes(order.status_pembayaran) : false;
-  });
+  
+  
+  const filteredOrders = safeOrders
+    .filter(order => {
+        const query = searchQuery.toLowerCase();
+        return (
+            order.nama.toLowerCase().includes(query) ||
+            order.layanan.toLowerCase().includes(query) ||
+            order.no_hp.toLowerCase().includes(query) ||
+            order.kota.toLowerCase().includes(query) ||
+            order.platform.toLowerCase().includes(query)
+        );
+    })
+    .filter(order => {
+        const validStatuses = statusMap[activeTab];
+        return validStatuses ? validStatuses.includes(order.status_pembayaran) : false;
+    });
 
   const totalItems = filteredOrders.length;
   const totalPages = Math.ceil(totalItems / itemsPerPage);
@@ -42,12 +56,17 @@ const OrderTable: FC<OrderTableProps> = ({ orders }) => {
 
   const handleItemsPerPageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setItemsPerPage(Number(e.target.value));
-    setCurrentPage(1); // Reset to first page
+    setCurrentPage(1);
   };
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [activeTab, searchQuery]);
+
 
   const visiblePages = useMemo(() => {
     const pages: (number | string)[] = [];
-    const maxVisible = 5; // Maksimum tombol halaman yang terlihat
+    const maxVisible = 5;
     const half = Math.floor(maxVisible / 2);
 
     if (totalPages <= maxVisible) {
@@ -76,10 +95,6 @@ const OrderTable: FC<OrderTableProps> = ({ orders }) => {
     return pages;
   }, [totalPages, currentPage]);
 
-  useState(() => {
-    setCurrentPage(1);
-  }, [activeTab, itemsPerPage]);
-
   return (
     <div className="bg-white dark:bg-neutral-800/50 p-6 rounded-xl border border-gray-200 dark:border-neutral-700/50">
       <div className="flex border-b border-gray-200 dark:border-neutral-700">
@@ -98,7 +113,10 @@ const OrderTable: FC<OrderTableProps> = ({ orders }) => {
         ))}
       </div>
 
-      <OrderTableFilters />
+      <OrderTableFilters 
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+      />
 
       <div className="overflow-x-auto">
         <table className="w-full text-sm text-left text-gray-500 dark:text-neutral-400">
