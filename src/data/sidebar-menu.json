@@ -14,11 +14,18 @@
         "href": "/dashboard"
     },
     {
-        "id": "orders",
+        "id": "orders/b2c",
         "icon": "solar:reorder-outline",
         "iconActive": "solar:reorder-bold",
-        "label": "Orders",
-        "href": "/orders"
+        "label": "Order B2C",
+        "href": "/orders/b2c"
+    },
+    {
+        "id": "orders/b2b",
+        "icon": "solar:reorder-outline",
+        "iconActive": "solar:reorder-bold",
+        "label": "Order B2B",
+        "href": "/orders/b2b"
     },
     {
         "id": "favorites",
