@@ -13,10 +13,10 @@ interface OrderTableProps {
 const OrderTable: FC<OrderTableProps> = ({ orders }) => {
   const [activeTab, setActiveTab] = useState('Belum Bayar');
   
-  const TABS = ['Belum Bayar', 'Sedang Diproses', 'Selesai'];
+  const TABS = ['Belum Bayar', 'Sedang Sedang Diproses', 'Selesai'];
   const statusMap: { [key: string]: OrderStatus[] } = {
     'Belum Bayar': ['Belum Bayar'],
-    'Sedang Diproses': ['Diproses', 'Sudah Bayar'],
+    'Sedang Sedang Diproses': ['Sedang Diproses', 'Sudah Bayar'],
     'Selesai': ['Selesai'],
   };
 

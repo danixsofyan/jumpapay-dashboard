@@ -21,7 +21,7 @@ export default function B2CPage() {
                     status_pembayaran: order.status_pembayaran as
                       | "Belum Bayar"
                       | "Sudah Bayar"
-                      | "Diproses"
+                      | "Sedang Diproses"
                       | "Selesai",
                   })),
                 }}

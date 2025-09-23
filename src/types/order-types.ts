@@ -1,4 +1,4 @@
-export type OrderStatus = 'Belum Bayar' | 'Sudah Bayar' | 'Diproses' | 'Selesai';
+export type OrderStatus = 'Belum Bayar' | 'Sudah Bayar' | 'Sedang Diproses' | 'Selesai';
 
 export interface Order { 
   id: number; 

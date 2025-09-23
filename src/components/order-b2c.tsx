@@ -7,7 +7,7 @@ import OrderTable from '@/components/order-table';
 
 interface Stat { id: string; label: string; value: string; icon: string; }
 interface OrderListItem { label: string; value: string; }
-interface Order { id: number; tanggal: string; nama: string; layanan: string; no_hp: string; kota: string; status_pembayaran: 'Belum Bayar' | 'Sudah Bayar' | 'Diproses' | 'Selesai'; platform: string; harga: string; }
+interface Order { id: number; tanggal: string; nama: string; layanan: string; no_hp: string; kota: string; status_pembayaran: 'Belum Bayar' | 'Sudah Bayar' | 'Sedang Diproses' | 'Selesai'; platform: string; harga: string; }
 interface OrderB2CProps { data: { summary_stats: Stat[]; list_order: OrderListItem[]; orders: Order[]; }; }
 
 const OrderB2C: FC<OrderB2CProps> = ({ data }) => {
