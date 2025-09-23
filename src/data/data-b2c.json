@@ -138,6 +138,116 @@
       "status_pembayaran": "Selesai",
       "platform": "Seva",
       "harga": "Rp3.373.000"
+    },
+    {
+      "id": 12,
+      "tanggal": "11/07/2025",
+      "nama": "Kaiden Break",
+      "layanan": "Perpanjangan Pajak 1 Tahun",
+      "no_hp": "08111111231",
+      "kota": "Jakarta Selatan",
+      "status_pembayaran": "Belum Bayar",
+      "platform": "Seva",
+      "harga": "Rp24.000.000"
+    },
+    {
+      "id": 13,
+      "tanggal": "11/07/2025",
+      "nama": "Bambang agus",
+      "layanan": "Perpanjangan Pajak 1 Tahun",
+      "no_hp": "0882123012",
+      "kota": "Tangerang",
+      "status_pembayaran": "Belum Bayar",
+      "platform": "Seva",
+      "harga": "Rp2.390.000"
+    },
+    {
+      "id": 14,
+      "tanggal": "11/07/2025",
+      "nama": "Ryan juana",
+      "layanan": "Perpanjangan Pajak 1 Tahun",
+      "no_hp": "081321239981",
+      "kota": "Depok",
+      "status_pembayaran": "Belum Bayar",
+      "platform": "Seva",
+      "harga": "Rp2.020.000"
+    },
+    {
+      "id": 15,
+      "tanggal": "11/07/2025",
+      "nama": "Andika",
+      "layanan": "Perpanjangan Pajak 1 Tahun",
+      "no_hp": "0822349008",
+      "kota": "Jakarta Utara",
+      "status_pembayaran": "Belum Bayar",
+      "platform": "Seva",
+      "harga": "Rp2.670.000"
+    },
+    {
+      "id": 16,
+      "tanggal": "11/07/2025",
+      "nama": "Nelson Listianto",
+      "layanan": "Perpanjangan Pajak 1 Tahun",
+      "no_hp": "08890123587",
+      "kota": "Jakarta Selatan",
+      "status_pembayaran": "Belum Bayar",
+      "platform": "Seva",
+      "harga": "Rp3.540.000"
+    },
+    {
+      "id": 17,
+      "tanggal": "11/07/2025",
+      "nama": "Satria P",
+      "layanan": "Perpanjangan Pajak 1 Tahun",
+      "no_hp": "081234567890",
+      "kota": "BSD",
+      "status_pembayaran": "Belum Bayar",
+      "platform": "Seva",
+      "harga": "Rp7.120.000"
+    },
+    {
+      "id": 18,
+      "tanggal": "11/07/2025",
+      "nama": "Jonathan",
+      "layanan": "Perpanjangan Pajak 1 Tahun",
+      "no_hp": "082765009214",
+      "kota": "Jakarta Selatan",
+      "status_pembayaran": "Belum Bayar",
+      "platform": "Seva",
+      "harga": "Rp11.600.000"
+    },
+    {
+      "id": 19,
+      "tanggal": "11/07/2025",
+      "nama": "Elyas",
+      "layanan": "Perpanjangan Pajak 1 Tahun",
+      "no_hp": "088799222001",
+      "kota": "PIK",
+      "status_pembayaran": "Belum Bayar",
+      "platform": "Seva",
+      "harga": "Rp507.000"
+    },
+    {
+      "id": 20,
+      "tanggal": "11/07/2025",
+      "nama": "Fritz O Stanley",
+      "layanan": "Perpanjangan Pajak 1 Tahun",
+      "no_hp": "082996476000",
+      "kota": "Bekasi",
+      "status_pembayaran": "Belum Bayar",
+      "platform": "Seva",
+      "harga": "Rp3.373.000"
+    },
+    {
+      "id": 21,
+      "tanggal": "11/07/2025",
+      "nama": "Restu",
+      "layanan": "Perpanjangan Pajak 1 Tahun",
+      "no_hp": "082996476000",
+      "kota": "Bekasi",
+      "status_pembayaran": "Sedang Diproses",
+      "platform": "Seva",
+      "harga": "Rp3.373.000"
     }
   ]
 }

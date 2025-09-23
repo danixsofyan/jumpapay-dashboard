@@ -1,10 +1,11 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import type { FC } from 'react';
 import type { Order, OrderStatus } from '@/types/order-types';
 import OrderTableFilters from './order-table-filters';
 import OrderTableRow from './order-table-row';
+import { ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface OrderTableProps {
   orders: Order[];
@@ -12,6 +13,8 @@ interface OrderTableProps {
 
 const OrderTable: FC<OrderTableProps> = ({ orders }) => {
   const [activeTab, setActiveTab] = useState('Belum Bayar');
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(10);
   
   const TABS = ['Belum Bayar', 'Sedang Diproses', 'Selesai'];
   const statusMap: { [key: string]: OrderStatus[] } = {
@@ -25,6 +28,57 @@ const OrderTable: FC<OrderTableProps> = ({ orders }) => {
     const validStatuses = statusMap[activeTab];
     return validStatuses ? validStatuses.includes(order.status_pembayaran) : false;
   });
+
+  const totalItems = filteredOrders.length;
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
+  
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = Math.min(startIndex + itemsPerPage, totalItems);
+  const paginatedOrders = filteredOrders.slice(startIndex, endIndex);
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+  };
+
+  const handleItemsPerPageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setItemsPerPage(Number(e.target.value));
+    setCurrentPage(1); // Reset to first page
+  };
+
+  const visiblePages = useMemo(() => {
+    const pages: (number | string)[] = [];
+    const maxVisible = 5; // Maksimum tombol halaman yang terlihat
+    const half = Math.floor(maxVisible / 2);
+
+    if (totalPages <= maxVisible) {
+      for (let i = 1; i <= totalPages; i++) {
+        pages.push(i);
+      }
+    } else {
+      if (currentPage <= half + 1) {
+        for (let i = 1; i <= maxVisible - 1; i++) {
+          pages.push(i);
+        }
+        pages.push('...', totalPages);
+      } else if (currentPage >= totalPages - half) {
+        pages.push(1, '...');
+        for (let i = totalPages - (maxVisible - 2); i <= totalPages; i++) {
+          pages.push(i);
+        }
+      } else {
+        pages.push(1, '...');
+        for (let i = currentPage - half + 1; i <= currentPage + half - 1; i++) {
+          pages.push(i);
+        }
+        pages.push('...', totalPages);
+      }
+    }
+    return pages;
+  }, [totalPages, currentPage]);
+
+  useState(() => {
+    setCurrentPage(1);
+  }, [activeTab, itemsPerPage]);
 
   return (
     <div className="bg-white dark:bg-neutral-800/50 p-6 rounded-xl border border-gray-200 dark:border-neutral-700/50">
@@ -56,12 +110,80 @@ const OrderTable: FC<OrderTableProps> = ({ orders }) => {
             </tr>
           </thead>
           <tbody>
-            {filteredOrders.map(order => (
+            {paginatedOrders.map(order => (
               <OrderTableRow key={order.id} order={order} />
             ))}
+            {paginatedOrders.length === 0 && (
+              <tr>
+                <td colSpan={9} className="py-8 text-center text-gray-500 dark:text-neutral-400">
+                  Tidak ada data yang ditemukan.
+                </td>
+              </tr>
+            )}
           </tbody>
         </table>
       </div>
+
+      {/* Pagination Controls */}
+      {totalItems > 0 && (
+        <div className="flex flex-col sm:flex-row items-center justify-between mt-6">
+          <div className="flex items-center gap-2 mb-4 sm:mb-0">
+            <span className="text-sm text-gray-500 dark:text-neutral-400">Baris per halaman</span>
+            <div className="relative">
+              <select
+                value={itemsPerPage}
+                onChange={handleItemsPerPageChange}
+                className="w-[110px] h-[36px] appearance-none cursor-pointer rounded-lg border border-gray-300 dark:border-neutral-600 bg-white dark:bg-neutral-900 pl-4 pr-8 text-xs font-semibold text-gray-800 dark:text-white"
+              >
+                <option value={5}>5 Baris</option>
+                <option value={10}>10 Baris</option>
+                <option value={20}>20 Baris</option>
+                <option value={50}>50 Baris</option>
+              </select>
+              <span className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500">
+                <ChevronDown size={16} />
+              </span>
+            </div>
+          </div>
+          <div className="flex items-center gap-4">
+            <span className="text-sm text-gray-500 dark:text-neutral-400">
+              {startIndex + 1}-{endIndex} dari {totalItems} data
+            </span>
+            <div className="flex items-center gap-1">
+              <button
+                onClick={() => handlePageChange(currentPage - 1)}
+                disabled={currentPage === 1}
+                className="w-8 h-8 flex items-center justify-center rounded-lg disabled:opacity-50 disabled:cursor-not-allowed text-gray-500 dark:text-neutral-400 hover:bg-gray-100 dark:hover:bg-neutral-700 transition-colors duration-200"
+              >
+                <ChevronLeft size={20} />
+              </button>
+              {visiblePages.map((page, index) => (
+                <button
+                  key={index}
+                  onClick={() => typeof page === 'number' && handlePageChange(page)}
+                  disabled={typeof page !== 'number'}
+                  className={`w-8 h-8 flex items-center justify-center rounded-lg text-sm font-medium transition-colors duration-200 ${
+                    typeof page === 'number'
+                      ? currentPage === page
+                        ? 'bg-blue-100 text-primary dark:bg-blue-900/50 dark:text-white'
+                        : 'bg-white text-gray-800 dark:bg-neutral-800 dark:text-white hover:bg-gray-100 dark:hover:bg-neutral-700'
+                      : 'cursor-default text-gray-500 dark:text-neutral-400'
+                  }`}
+                >
+                  {page}
+                </button>
+              ))}
+              <button
+                onClick={() => handlePageChange(currentPage + 1)}
+                disabled={currentPage === totalPages}
+                className="w-8 h-8 flex items-center justify-center rounded-lg disabled:opacity-50 disabled:cursor-not-allowed text-gray-500 dark:text-neutral-400 hover:bg-gray-100 dark:hover:bg-neutral-700 transition-colors duration-200"
+              >
+                <ChevronRight size={20} />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
