@@ -2,7 +2,7 @@
   "summary_stats": [
     { "id": "total_order", "label": "Total Order", "value": "52", "icon": "mdi:package-variant-closed" },
     { "id": "motor", "label": "Motor", "value": "9", "icon": "mdi:moped" },
-    { "id": "mobil", "label": "Mobil", "value": "45", "icon": "mdi:car" },
+    { "id": "mobil", "value": "45", "icon": "mdi:car" },
     { "id": "biaya_administrasi", "label": "Biaya Administrasi", "value": "Rp1.490.000", "icon": "mdi:file-document-plus-outline" },
     { "id": "jasa_jumpapay", "label": "Jasa Jumpapay", "value": "Rp5.399.925", "icon": "mdi:wallet-outline" },
     { "id": "delivery_fee", "label": "Delivery Fee", "value": "Rp1.900.000", "icon": "mdi:truck-outline" },
@@ -27,7 +27,54 @@
       "kota": "Jakarta Selatan",
       "status_pembayaran": "Belum Bayar",
       "platform": "Seva",
-      "harga": "Rp24.000.000"
+      "harga": "Rp7.575.000",
+      "detail": {
+        "metode_pembayaran": "Transfer",
+        "alamat_penjemputan": {
+          "kota": "Jakarta Utara",
+          "detail": "Bukit Golf Mediterrania, Cluster Royal Mansion, Blok Royal No. 5, PIK FIT, Pantai Indah Kapuk, Jakarta Utara"
+        },
+        "status_detail": {
+          "status": "Verifikasi Order",
+          "status_pembayaran_detail": "Verifikasi Order",
+          "kurir": "-",
+          "serah_terima_dokumen": "Dijemput"
+        },
+        "perpanjangan_pajak": {
+          "jenis_kendaraan": "Mobil",
+          "nomor_plat": "B2248ID",
+          "pkb_terakhir": "Rp24.000.000",
+          "masa_berlaku_pkb": "07/15/2025",
+          "total_harga": "Rp2.810.000",
+          "biaya_jasa": "Rp164.000"
+        },
+        "dokumen_order": [
+          { "label": "Foto STNK", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+STNK" },
+          { "label": "Foto KTP", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+KTP" },
+          { "label": "Foto BPKB Depan", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+BPKB+Depan" },
+          { "label": "Foto BPKB Belakang", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+BPKB+Belakang" }
+        ],
+        "rincian_pembayaran": {
+          "biaya_pajak": [
+            { "label": "Pajak Kendaraan Bermotor (PKB)", "value": "Rp4.373.000" },
+            { "label": "Pajak Tertunggak SKP", "value": "Rp0" },
+            { "label": "Denda Pajak KB", "value": "Rp2.887.000" },
+            { "label": "Opsen PKB Pokok", "value": "Rp0" },
+            { "label": "Opsen PKB Denda", "value": "Rp0" },
+            { "label": "SWDKLLJ", "value": "Rp143.000" },
+            { "label": "SWDKLLJ Denda", "value": "Rp0" },
+            { "label": "Admin STNK", "value": "Rp0" },
+            { "label": "TNBK (Plat Kendaraan Baru)", "value": "Rp0" }
+          ],
+          "sub_total_biaya_pajak": "Rp7.403.000",
+          "biaya_jasa_jumpapay": [
+            { "label": "Biaya Jasa Jumpapay", "value": "Rp87.000" },
+            { "label": "Biaya Admin Cetak Dokumen", "value": "Rp35.000" },
+            { "label": "Biaya Antar Jemput Dokumen", "value": "Rp50.000" }
+          ],
+          "sub_total_biaya_jasa_jumpapay": "Rp172.000"
+        }
+      }
     },
     {
       "id": 2,
@@ -38,7 +85,53 @@
       "kota": "Tangerang",
       "status_pembayaran": "Belum Bayar",
       "platform": "Seva",
-      "harga": "Rp2.390.000"
+      "harga": "Rp2.390.000",
+      "detail": {
+        "metode_pembayaran": "Transfer",
+        "alamat_penjemputan": {
+          "kota": "Tangerang",
+          "detail": "Jl. Raya Serpong, BSD City, Tangerang"
+        },
+        "status_detail": {
+          "status": "Verifikasi Order",
+          "status_pembayaran_detail": "Verifikasi Order",
+          "kurir": "Joni",
+          "serah_terima_dokumen": "Diambil Kurir"
+        },
+        "perpanjangan_pajak": {
+          "jenis_kendaraan": "Motor",
+          "nomor_plat": "B6789IJ",
+          "pkb_terakhir": "Rp1.500.000",
+          "masa_berlaku_pkb": "08/20/2025",
+          "total_harga": "Rp1.800.000",
+          "biaya_jasa": "Rp100.000"
+        },
+        "dokumen_order": [
+          { "label": "Foto STNK", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+STNK+Motor" },
+          { "label": "Foto KTP", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+KTP+Bambang" },
+          { "label": "Foto BPKB", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+BPKB+Motor" }
+        ],
+        "rincian_pembayaran": {
+          "biaya_pajak": [
+            { "label": "Pajak Kendaraan Bermotor (PKB)", "value": "Rp1.850.000" },
+            { "label": "Pajak Tertunggak SKP", "value": "Rp0" },
+            { "label": "Denda Pajak KB", "value": "Rp500.000" },
+            { "label": "Opsen PKB Pokok", "value": "Rp0" },
+            { "label": "Opsen PKB Denda", "value": "Rp0" },
+            { "label": "SWDKLLJ", "value": "Rp40.000" },
+            { "label": "SWDKLLJ Denda", "value": "Rp0" },
+            { "label": "Admin STNK", "value": "Rp0" },
+            { "label": "TNBK (Plat Kendaraan Baru)", "value": "Rp0" }
+          ],
+          "sub_total_biaya_pajak": "Rp2.390.000",
+          "biaya_jasa_jumpapay": [
+            { "label": "Biaya Jasa Jumpapay", "value": "Rp50.000" },
+            { "label": "Biaya Admin Cetak Dokumen", "value": "Rp20.000" },
+            { "label": "Biaya Antar Jemput Dokumen", "value": "Rp30.000" }
+          ],
+          "sub_total_biaya_jasa_jumpapay": "Rp100.000"
+        }
+      }
     },
     {
       "id": 3,
@@ -49,7 +142,52 @@
       "kota": "Depok",
       "status_pembayaran": "Belum Bayar",
       "platform": "Seva",
-      "harga": "Rp2.020.000"
+      "harga": "Rp2.020.000",
+      "detail": {
+        "metode_pembayaran": "Transfer",
+        "alamat_penjemputan": {
+          "kota": "Depok",
+          "detail": "Jalan Margonda Raya No. 1, Depok"
+        },
+        "status_detail": {
+          "status": "Verifikasi Order",
+          "status_pembayaran_detail": "Verifikasi Order",
+          "kurir": "-",
+          "serah_terima_dokumen": "Dijemput"
+        },
+        "perpanjangan_pajak": {
+          "jenis_kendaraan": "Mobil",
+          "nomor_plat": "B1234DE",
+          "pkb_terakhir": "Rp1.800.000",
+          "masa_berlaku_pkb": "09/10/2025",
+          "total_harga": "Rp2.000.000",
+          "biaya_jasa": "Rp80.000"
+        },
+        "dokumen_order": [
+          { "label": "Foto STNK", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+STNK+Ryan" },
+          { "label": "Foto KTP", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+KTP+Ryan" }
+        ],
+        "rincian_pembayaran": {
+          "biaya_pajak": [
+            { "label": "Pajak Kendaraan Bermotor (PKB)", "value": "Rp1.700.000" },
+            { "label": "Pajak Tertunggak SKP", "value": "Rp0" },
+            { "label": "Denda Pajak KB", "value": "Rp20.000" },
+            { "label": "Opsen PKB Pokok", "value": "Rp0" },
+            { "label": "Opsen PKB Denda", "value": "Rp0" },
+            { "label": "SWDKLLJ", "value": "Rp100.000" },
+            { "label": "SWDKLLJ Denda", "value": "Rp0" },
+            { "label": "Admin STNK", "value": "Rp0" },
+            { "label": "TNBK (Plat Kendaraan Baru)", "value": "Rp0" }
+          ],
+          "sub_total_biaya_pajak": "Rp1.820.000",
+          "biaya_jasa_jumpapay": [
+            { "label": "Biaya Jasa Jumpapay", "value": "Rp50.000" },
+            { "label": "Biaya Admin Cetak Dokumen", "value": "Rp10.000" },
+            { "label": "Biaya Antar Jemput Dokumen", "value": "Rp50.000" }
+          ],
+          "sub_total_biaya_jasa_jumpapay": "Rp110.000"
+        }
+      }
     },
     {
       "id": 4,
@@ -60,7 +198,52 @@
       "kota": "Jakarta Utara",
       "status_pembayaran": "Belum Bayar",
       "platform": "Seva",
-      "harga": "Rp2.670.000"
+      "harga": "Rp2.670.000",
+      "detail": {
+        "metode_pembayaran": "Transfer",
+        "alamat_penjemputan": {
+          "kota": "Jakarta Utara",
+          "detail": "Jalan Pluit Selatan, Jakarta Utara"
+        },
+        "status_detail": {
+          "status": "Verifikasi Order",
+          "status_pembayaran_detail": "Verifikasi Order",
+          "kurir": "-",
+          "serah_terima_dokumen": "Dijemput"
+        },
+        "perpanjangan_pajak": {
+          "jenis_kendaraan": "Motor",
+          "nomor_plat": "B4567FG",
+          "pkb_terakhir": "Rp2.000.000",
+          "masa_berlaku_pkb": "10/05/2025",
+          "total_harga": "Rp2.500.000",
+          "biaya_jasa": "Rp70.000"
+        },
+        "dokumen_order": [
+          { "label": "Foto STNK", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+STNK+Andika" },
+          { "label": "Foto KTP", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+KTP+Andika" }
+        ],
+        "rincian_pembayaran": {
+          "biaya_pajak": [
+            { "label": "Pajak Kendaraan Bermotor (PKB)", "value": "Rp2.200.000" },
+            { "label": "Pajak Tertunggak SKP", "value": "Rp0" },
+            { "label": "Denda Pajak KB", "value": "Rp100.000" },
+            { "label": "Opsen PKB Pokok", "value": "Rp0" },
+            { "label": "Opsen PKB Denda", "value": "Rp0" },
+            { "label": "SWDKLLJ", "value": "Rp80.000" },
+            { "label": "SWDKLLJ Denda", "value": "Rp0" },
+            { "label": "Admin STNK", "value": "Rp0" },
+            { "label": "TNBK (Plat Kendaraan Baru)", "value": "Rp0" }
+          ],
+          "sub_total_biaya_pajak": "Rp2.380.000",
+          "biaya_jasa_jumpapay": [
+            { "label": "Biaya Jasa Jumpapay", "value": "Rp90.000" },
+            { "label": "Biaya Admin Cetak Dokumen", "value": "Rp20.000" },
+            { "label": "Biaya Antar Jemput Dokumen", "value": "Rp40.000" }
+          ],
+          "sub_total_biaya_jasa_jumpapay": "Rp150.000"
+        }
+      }
     },
     {
       "id": 5,
@@ -71,7 +254,53 @@
       "kota": "Jakarta Selatan",
       "status_pembayaran": "Belum Bayar",
       "platform": "Seva",
-      "harga": "Rp3.540.000"
+      "harga": "Rp3.540.000",
+      "detail": {
+        "metode_pembayaran": "Transfer",
+        "alamat_penjemputan": {
+          "kota": "Jakarta Selatan",
+          "detail": "Jalan Kemang Raya No. 10, Jakarta Selatan"
+        },
+        "status_detail": {
+          "status": "Verifikasi Order",
+          "status_pembayaran_detail": "Verifikasi Order",
+          "kurir": "-",
+          "serah_terima_dokumen": "Dijemput"
+        },
+        "perpanjangan_pajak": {
+          "jenis_kendaraan": "Mobil",
+          "nomor_plat": "B7890KL",
+          "pkb_terakhir": "Rp3.200.000",
+          "masa_berlaku_pkb": "11/22/2025",
+          "total_harga": "Rp3.400.000",
+          "biaya_jasa": "Rp140.000"
+        },
+        "dokumen_order": [
+          { "label": "Foto STNK", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+STNK+Nelson" },
+          { "label": "Foto KTP", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+KTP+Nelson" },
+          { "label": "Foto BPKB", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+BPKB+Nelson" }
+        ],
+        "rincian_pembayaran": {
+          "biaya_pajak": [
+            { "label": "Pajak Kendaraan Bermotor (PKB)", "value": "Rp3.100.000" },
+            { "label": "Pajak Tertunggak SKP", "value": "Rp0" },
+            { "label": "Denda Pajak KB", "value": "Rp100.000" },
+            { "label": "Opsen PKB Pokok", "value": "Rp0" },
+            { "label": "Opsen PKB Denda", "value": "Rp0" },
+            { "label": "SWDKLLJ", "value": "Rp150.000" },
+            { "label": "SWDKLLJ Denda", "value": "Rp0" },
+            { "label": "Admin STNK", "value": "Rp0" },
+            { "label": "TNBK (Plat Kendaraan Baru)", "value": "Rp0" }
+          ],
+          "sub_total_biaya_pajak": "Rp3.350.000",
+          "biaya_jasa_jumpapay": [
+            { "label": "Biaya Jasa Jumpapay", "value": "Rp90.000" },
+            { "label": "Biaya Admin Cetak Dokumen", "value": "Rp20.000" },
+            { "label": "Biaya Antar Jemput Dokumen", "value": "Rp80.000" }
+          ],
+          "sub_total_biaya_jasa_jumpapay": "Rp190.000"
+        }
+      }
     },
     {
       "id": 6,
@@ -82,7 +311,53 @@
       "kota": "BSD",
       "status_pembayaran": "Belum Bayar",
       "platform": "Seva",
-      "harga": "Rp7.120.000"
+      "harga": "Rp7.120.000",
+      "detail": {
+        "metode_pembayaran": "Transfer",
+        "alamat_penjemputan": {
+          "kota": "BSD",
+          "detail": "Jalan Pahlawan Seribu No. 50, BSD City"
+        },
+        "status_detail": {
+          "status": "Verifikasi Order",
+          "status_pembayaran_detail": "Verifikasi Order",
+          "kurir": "Budi",
+          "serah_terima_dokumen": "Dijemput"
+        },
+        "perpanjangan_pajak": {
+          "jenis_kendaraan": "Mobil",
+          "nomor_plat": "B9876OP",
+          "pkb_terakhir": "Rp6.500.000",
+          "masa_berlaku_pkb": "12/01/2025",
+          "total_harga": "Rp6.800.000",
+          "biaya_jasa": "Rp320.000"
+        },
+        "dokumen_order": [
+          { "label": "Foto STNK", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+STNK+Satria" },
+          { "label": "Foto KTP", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+KTP+Satria" },
+          { "label": "Foto BPKB", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+BPKB+Satria" }
+        ],
+        "rincian_pembayaran": {
+          "biaya_pajak": [
+            { "label": "Pajak Kendaraan Bermotor (PKB)", "value": "Rp6.200.000" },
+            { "label": "Pajak Tertunggak SKP", "value": "Rp0" },
+            { "label": "Denda Pajak KB", "value": "Rp400.000" },
+            { "label": "Opsen PKB Pokok", "value": "Rp0" },
+            { "label": "Opsen PKB Denda", "value": "Rp0" },
+            { "label": "SWDKLLJ", "value": "Rp100.000" },
+            { "label": "SWDKLLJ Denda", "value": "Rp0" },
+            { "label": "Admin STNK", "value": "Rp0" },
+            { "label": "TNBK (Plat Kendaraan Baru)", "value": "Rp0" }
+          ],
+          "sub_total_biaya_pajak": "Rp6.700.000",
+          "biaya_jasa_jumpapay": [
+            { "label": "Biaya Jasa Jumpapay", "value": "Rp150.000" },
+            { "label": "Biaya Admin Cetak Dokumen", "value": "Rp50.000" },
+            { "label": "Biaya Antar Jemput Dokumen", "value": "Rp200.000" }
+          ],
+          "sub_total_biaya_jasa_jumpapay": "Rp400.000"
+        }
+      }
     },
     {
       "id": 7,
@@ -93,7 +368,52 @@
       "kota": "Jakarta Selatan",
       "status_pembayaran": "Belum Bayar",
       "platform": "Seva",
-      "harga": "Rp11.600.000"
+      "harga": "Rp11.600.000",
+      "detail": {
+        "metode_pembayaran": "Transfer",
+        "alamat_penjemputan": {
+          "kota": "Jakarta Selatan",
+          "detail": "Jl. Fatmawati No. 100, Jakarta Selatan"
+        },
+        "status_detail": {
+          "status": "Verifikasi Order",
+          "status_pembayaran_detail": "Verifikasi Order",
+          "kurir": "Agus",
+          "serah_terima_dokumen": "Dijemput"
+        },
+        "perpanjangan_pajak": {
+          "jenis_kendaraan": "Mobil",
+          "nomor_plat": "B1122CD",
+          "pkb_terakhir": "Rp10.500.000",
+          "masa_berlaku_pkb": "01/10/2026",
+          "total_harga": "Rp11.000.000",
+          "biaya_jasa": "Rp600.000"
+        },
+        "dokumen_order": [
+          { "label": "Foto STNK", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+STNK+Jonathan" },
+          { "label": "Foto KTP", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+KTP+Jonathan" }
+        ],
+        "rincian_pembayaran": {
+          "biaya_pajak": [
+            { "label": "Pajak Kendaraan Bermotor (PKB)", "value": "Rp10.200.000" },
+            { "label": "Pajak Tertunggak SKP", "value": "Rp0" },
+            { "label": "Denda Pajak KB", "value": "Rp600.000" },
+            { "label": "Opsen PKB Pokok", "value": "Rp0" },
+            { "label": "Opsen PKB Denda", "value": "Rp0" },
+            { "label": "SWDKLLJ", "value": "Rp200.000" },
+            { "label": "SWDKLLJ Denda", "value": "Rp0" },
+            { "label": "Admin STNK", "value": "Rp0" },
+            { "label": "TNBK (Plat Kendaraan Baru)", "value": "Rp0" }
+          ],
+          "sub_total_biaya_pajak": "Rp11.000.000",
+          "biaya_jasa_jumpapay": [
+            { "label": "Biaya Jasa Jumpapay", "value": "Rp200.000" },
+            { "label": "Biaya Admin Cetak Dokumen", "value": "Rp50.000" },
+            { "label": "Biaya Antar Jemput Dokumen", "value": "Rp350.000" }
+          ],
+          "sub_total_biaya_jasa_jumpapay": "Rp600.000"
+        }
+      }
     },
     {
       "id": 8,
@@ -104,7 +424,51 @@
       "kota": "PIK",
       "status_pembayaran": "Belum Bayar",
       "platform": "Seva",
-      "harga": "Rp507.000"
+      "harga": "Rp507.000",
+      "detail": {
+        "metode_pembayaran": "Transfer",
+        "alamat_penjemputan": {
+          "kota": "PIK",
+          "detail": "Jalan Marina Indah Raya, Jakarta Utara"
+        },
+        "status_detail": {
+          "status": "Verifikasi Order",
+          "status_pembayaran_detail": "Verifikasi Order",
+          "kurir": "Joni",
+          "serah_terima_dokumen": "Dijemput"
+        },
+        "perpanjangan_pajak": {
+          "jenis_kendaraan": "Motor",
+          "nomor_plat": "B5566GH",
+          "pkb_terakhir": "Rp400.000",
+          "masa_berlaku_pkb": "02/12/2026",
+          "total_harga": "Rp450.000",
+          "biaya_jasa": "Rp57.000"
+        },
+        "dokumen_order": [
+          { "label": "Foto STNK", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+STNK+Elyas" }
+        ],
+        "rincian_pembayaran": {
+          "biaya_pajak": [
+            { "label": "Pajak Kendaraan Bermotor (PKB)", "value": "Rp380.000" },
+            { "label": "Pajak Tertunggak SKP", "value": "Rp0" },
+            { "label": "Denda Pajak KB", "value": "Rp20.000" },
+            { "label": "Opsen PKB Pokok", "value": "Rp0" },
+            { "label": "Opsen PKB Denda", "value": "Rp0" },
+            { "label": "SWDKLLJ", "value": "Rp50.000" },
+            { "label": "SWDKLLJ Denda", "value": "Rp0" },
+            { "label": "Admin STNK", "value": "Rp0" },
+            { "label": "TNBK (Plat Kendaraan Baru)", "value": "Rp0" }
+          ],
+          "sub_total_biaya_pajak": "Rp450.000",
+          "biaya_jasa_jumpapay": [
+            { "label": "Biaya Jasa Jumpapay", "value": "Rp30.000" },
+            { "label": "Biaya Admin Cetak Dokumen", "value": "Rp15.000" },
+            { "label": "Biaya Antar Jemput Dokumen", "value": "Rp12.000" }
+          ],
+          "sub_total_biaya_jasa_jumpapay": "Rp57.000"
+        }
+      }
     },
     {
       "id": 9,
@@ -115,7 +479,52 @@
       "kota": "Bekasi",
       "status_pembayaran": "Belum Bayar",
       "platform": "Seva",
-      "harga": "Rp3.373.000"
+      "harga": "Rp3.373.000",
+      "detail": {
+        "metode_pembayaran": "Transfer",
+        "alamat_penjemputan": {
+          "kota": "Bekasi",
+          "detail": "Jalan Ahmad Yani No. 1, Bekasi"
+        },
+        "status_detail": {
+          "status": "Verifikasi Order",
+          "status_pembayaran_detail": "Verifikasi Order",
+          "kurir": "Budi",
+          "serah_terima_dokumen": "Dijemput"
+        },
+        "perpanjangan_pajak": {
+          "jenis_kendaraan": "Mobil",
+          "nomor_plat": "B7788MN",
+          "pkb_terakhir": "Rp3.000.000",
+          "masa_berlaku_pkb": "03/20/2026",
+          "total_harga": "Rp3.200.000",
+          "biaya_jasa": "Rp173.000"
+        },
+        "dokumen_order": [
+          { "label": "Foto STNK", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+STNK+Fritz" },
+          { "label": "Foto KTP", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+KTP+Fritz" }
+        ],
+        "rincian_pembayaran": {
+          "biaya_pajak": [
+            { "label": "Pajak Kendaraan Bermotor (PKB)", "value": "Rp2.900.000" },
+            { "label": "Pajak Tertunggak SKP", "value": "Rp0" },
+            { "label": "Denda Pajak KB", "value": "Rp200.000" },
+            { "label": "Opsen PKB Pokok", "value": "Rp0" },
+            { "label": "Opsen PKB Denda", "value": "Rp0" },
+            { "label": "SWDKLLJ", "value": "Rp100.000" },
+            { "label": "SWDKLLJ Denda", "value": "Rp0" },
+            { "label": "Admin STNK", "value": "Rp0" },
+            { "label": "TNBK (Plat Kendaraan Baru)", "value": "Rp0" }
+          ],
+          "sub_total_biaya_pajak": "Rp3.200.000",
+          "biaya_jasa_jumpapay": [
+            { "label": "Biaya Jasa Jumpapay", "value": "Rp100.000" },
+            { "label": "Biaya Admin Cetak Dokumen", "value": "Rp30.000" },
+            { "label": "Biaya Antar Jemput Dokumen", "value": "Rp43.000" }
+          ],
+          "sub_total_biaya_jasa_jumpapay": "Rp173.000"
+        }
+      }
     },
     {
       "id": 10,
@@ -126,7 +535,52 @@
       "kota": "Bekasi",
       "status_pembayaran": "Sedang Diproses",
       "platform": "Seva",
-      "harga": "Rp3.373.000"
+      "harga": "Rp3.373.000",
+      "detail": {
+        "metode_pembayaran": "Transfer",
+        "alamat_penjemputan": {
+          "kota": "Bekasi",
+          "detail": "Jalan Raya Hankam No. 10, Bekasi"
+        },
+        "status_detail": {
+          "status": "Sedang Diproses",
+          "status_pembayaran_detail": "Sudah Bayar",
+          "kurir": "Joni",
+          "serah_terima_dokumen": "Diambil Kurir"
+        },
+        "perpanjangan_pajak": {
+          "jenis_kendaraan": "Mobil",
+          "nomor_plat": "B9900PQ",
+          "pkb_terakhir": "Rp3.000.000",
+          "masa_berlaku_pkb": "04/05/2026",
+          "total_harga": "Rp3.200.000",
+          "biaya_jasa": "Rp173.000"
+        },
+        "dokumen_order": [
+          { "label": "Foto STNK", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+STNK+Restu" },
+          { "label": "Foto KTP", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+KTP+Restu" }
+        ],
+        "rincian_pembayaran": {
+          "biaya_pajak": [
+            { "label": "Pajak Kendaraan Bermotor (PKB)", "value": "Rp2.900.000" },
+            { "label": "Pajak Tertunggak SKP", "value": "Rp0" },
+            { "label": "Denda Pajak KB", "value": "Rp200.000" },
+            { "label": "Opsen PKB Pokok", "value": "Rp0" },
+            { "label": "Opsen PKB Denda", "value": "Rp0" },
+            { "label": "SWDKLLJ", "value": "Rp100.000" },
+            { "label": "SWDKLLJ Denda", "value": "Rp0" },
+            { "label": "Admin STNK", "value": "Rp0" },
+            { "label": "TNBK (Plat Kendaraan Baru)", "value": "Rp0" }
+          ],
+          "sub_total_biaya_pajak": "Rp3.200.000",
+          "biaya_jasa_jumpapay": [
+            { "label": "Biaya Jasa Jumpapay", "value": "Rp100.000" },
+            { "label": "Biaya Admin Cetak Dokumen", "value": "Rp30.000" },
+            { "label": "Biaya Antar Jemput Dokumen", "value": "Rp43.000" }
+          ],
+          "sub_total_biaya_jasa_jumpapay": "Rp173.000"
+        }
+      }
     },
     {
       "id": 11,
@@ -137,7 +591,52 @@
       "kota": "Bekasi",
       "status_pembayaran": "Selesai",
       "platform": "Seva",
-      "harga": "Rp3.373.000"
+      "harga": "Rp3.373.000",
+      "detail": {
+        "metode_pembayaran": "Transfer",
+        "alamat_penjemputan": {
+          "kota": "Bekasi",
+          "detail": "Jalan Jatiasih Raya No. 5, Bekasi"
+        },
+        "status_detail": {
+          "status": "Selesai",
+          "status_pembayaran_detail": "Sudah Bayar",
+          "kurir": "Budi",
+          "serah_terima_dokumen": "Selesai"
+        },
+        "perpanjangan_pajak": {
+          "jenis_kendaraan": "Mobil",
+          "nomor_plat": "B1133RS",
+          "pkb_terakhir": "Rp3.000.000",
+          "masa_berlaku_pkb": "05/15/2026",
+          "total_harga": "Rp3.200.000",
+          "biaya_jasa": "Rp173.000"
+        },
+        "dokumen_order": [
+          { "label": "Foto STNK", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+STNK+Dani" },
+          { "label": "Foto KTP", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+KTP+Dani" }
+        ],
+        "rincian_pembayaran": {
+          "biaya_pajak": [
+            { "label": "Pajak Kendaraan Bermotor (PKB)", "value": "Rp2.900.000" },
+            { "label": "Pajak Tertunggak SKP", "value": "Rp0" },
+            { "label": "Denda Pajak KB", "value": "Rp200.000" },
+            { "label": "Opsen PKB Pokok", "value": "Rp0" },
+            { "label": "Opsen PKB Denda", "value": "Rp0" },
+            { "label": "SWDKLLJ", "value": "Rp100.000" },
+            { "label": "SWDKLLJ Denda", "value": "Rp0" },
+            { "label": "Admin STNK", "value": "Rp0" },
+            { "label": "TNBK (Plat Kendaraan Baru)", "value": "Rp0" }
+          ],
+          "sub_total_biaya_pajak": "Rp3.200.000",
+          "biaya_jasa_jumpapay": [
+            { "label": "Biaya Jasa Jumpapay", "value": "Rp100.000" },
+            { "label": "Biaya Admin Cetak Dokumen", "value": "Rp30.000" },
+            { "label": "Biaya Antar Jemput Dokumen", "value": "Rp43.000" }
+          ],
+          "sub_total_biaya_jasa_jumpapay": "Rp173.000"
+        }
+      }
     },
     {
       "id": 12,
@@ -148,7 +647,52 @@
       "kota": "Jakarta Selatan",
       "status_pembayaran": "Belum Bayar",
       "platform": "Seva",
-      "harga": "Rp24.000.000"
+      "harga": "Rp24.000.000",
+      "detail": {
+        "metode_pembayaran": "Transfer",
+        "alamat_penjemputan": {
+          "kota": "Jakarta Selatan",
+          "detail": "Jalan Pondok Indah No. 1, Jakarta Selatan"
+        },
+        "status_detail": {
+          "status": "Verifikasi Order",
+          "status_pembayaran_detail": "Belum Bayar",
+          "kurir": "-",
+          "serah_terima_dokumen": "Dijemput"
+        },
+        "perpanjangan_pajak": {
+          "jenis_kendaraan": "Mobil",
+          "nomor_plat": "B1234AB",
+          "pkb_terakhir": "Rp23.000.000",
+          "masa_berlaku_pkb": "06/10/2026",
+          "total_harga": "Rp23.800.000",
+          "biaya_jasa": "Rp200.000"
+        },
+        "dokumen_order": [
+          { "label": "Foto STNK", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+STNK+Kaiden" },
+          { "label": "Foto KTP", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+KTP+Kaiden" }
+        ],
+        "rincian_pembayaran": {
+          "biaya_pajak": [
+            { "label": "Pajak Kendaraan Bermotor (PKB)", "value": "Rp22.000.000" },
+            { "label": "Pajak Tertunggak SKP", "value": "Rp0" },
+            { "label": "Denda Pajak KB", "value": "Rp1.000.000" },
+            { "label": "Opsen PKB Pokok", "value": "Rp0" },
+            { "label": "Opsen PKB Denda", "value": "Rp0" },
+            { "label": "SWDKLLJ", "value": "Rp800.000" },
+            { "label": "SWDKLLJ Denda", "value": "Rp0" },
+            { "label": "Admin STNK", "value": "Rp0" },
+            { "label": "TNBK (Plat Kendaraan Baru)", "value": "Rp0" }
+          ],
+          "sub_total_biaya_pajak": "Rp23.800.000",
+          "biaya_jasa_jumpapay": [
+            { "label": "Biaya Jasa Jumpapay", "value": "Rp100.000" },
+            { "label": "Biaya Admin Cetak Dokumen", "value": "Rp50.000" },
+            { "label": "Biaya Antar Jemput Dokumen", "value": "Rp50.000" }
+          ],
+          "sub_total_biaya_jasa_jumpapay": "Rp200.000"
+        }
+      }
     },
     {
       "id": 13,
@@ -159,7 +703,52 @@
       "kota": "Tangerang",
       "status_pembayaran": "Belum Bayar",
       "platform": "Seva",
-      "harga": "Rp2.390.000"
+      "harga": "Rp2.390.000",
+      "detail": {
+        "metode_pembayaran": "Transfer",
+        "alamat_penjemputan": {
+          "kota": "Tangerang",
+          "detail": "Jalan Alam Sutera No. 1, Tangerang"
+        },
+        "status_detail": {
+          "status": "Verifikasi Order",
+          "status_pembayaran_detail": "Belum Bayar",
+          "kurir": "-",
+          "serah_terima_dokumen": "Dijemput"
+        },
+        "perpanjangan_pajak": {
+          "jenis_kendaraan": "Mobil",
+          "nomor_plat": "B5566CD",
+          "pkb_terakhir": "Rp2.200.000",
+          "masa_berlaku_pkb": "07/20/2026",
+          "total_harga": "Rp2.300.000",
+          "biaya_jasa": "Rp90.000"
+        },
+        "dokumen_order": [
+          { "label": "Foto STNK", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+STNK+Bambang" },
+          { "label": "Foto KTP", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+KTP+Bambang" }
+        ],
+        "rincian_pembayaran": {
+          "biaya_pajak": [
+            { "label": "Pajak Kendaraan Bermotor (PKB)", "value": "Rp2.000.000" },
+            { "label": "Pajak Tertunggak SKP", "value": "Rp0" },
+            { "label": "Denda Pajak KB", "value": "Rp200.000" },
+            { "label": "Opsen PKB Pokok", "value": "Rp0" },
+            { "label": "Opsen PKB Denda", "value": "Rp0" },
+            { "label": "SWDKLLJ", "value": "Rp100.000" },
+            { "label": "SWDKLLJ Denda", "value": "Rp0" },
+            { "label": "Admin STNK", "value": "Rp0" },
+            { "label": "TNBK (Plat Kendaraan Baru)", "value": "Rp0" }
+          ],
+          "sub_total_biaya_pajak": "Rp2.300.000",
+          "biaya_jasa_jumpapay": [
+            { "label": "Biaya Jasa Jumpapay", "value": "Rp50.000" },
+            { "label": "Biaya Admin Cetak Dokumen", "value": "Rp20.000" },
+            { "label": "Biaya Antar Jemput Dokumen", "value": "Rp20.000" }
+          ],
+          "sub_total_biaya_jasa_jumpapay": "Rp90.000"
+        }
+      }
     },
     {
       "id": 14,
@@ -170,7 +759,52 @@
       "kota": "Depok",
       "status_pembayaran": "Belum Bayar",
       "platform": "Seva",
-      "harga": "Rp2.020.000"
+      "harga": "Rp2.020.000",
+      "detail": {
+        "metode_pembayaran": "Transfer",
+        "alamat_penjemputan": {
+          "kota": "Depok",
+          "detail": "Jalan Raya Sawangan No. 5, Depok"
+        },
+        "status_detail": {
+          "status": "Verifikasi Order",
+          "status_pembayaran_detail": "Belum Bayar",
+          "kurir": "-",
+          "serah_terima_dokumen": "Dijemput"
+        },
+        "perpanjangan_pajak": {
+          "jenis_kendaraan": "Mobil",
+          "nomor_plat": "B7788EF",
+          "pkb_terakhir": "Rp1.800.000",
+          "masa_berlaku_pkb": "08/25/2026",
+          "total_harga": "Rp1.900.000",
+          "biaya_jasa": "Rp120.000"
+        },
+        "dokumen_order": [
+          { "label": "Foto STNK", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+STNK+Ryan" },
+          { "label": "Foto KTP", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+KTP+Ryan" }
+        ],
+        "rincian_pembayaran": {
+          "biaya_pajak": [
+            { "label": "Pajak Kendaraan Bermotor (PKB)", "value": "Rp1.600.000" },
+            { "label": "Pajak Tertunggak SKP", "value": "Rp0" },
+            { "label": "Denda Pajak KB", "value": "Rp100.000" },
+            { "label": "Opsen PKB Pokok", "value": "Rp0" },
+            { "label": "Opsen PKB Denda", "value": "Rp0" },
+            { "label": "SWDKLLJ", "value": "Rp200.000" },
+            { "label": "SWDKLLJ Denda", "value": "Rp0" },
+            { "label": "Admin STNK", "value": "Rp0" },
+            { "label": "TNBK (Plat Kendaraan Baru)", "value": "Rp0" }
+          ],
+          "sub_total_biaya_pajak": "Rp1.900.000",
+          "biaya_jasa_jumpapay": [
+            { "label": "Biaya Jasa Jumpapay", "value": "Rp80.000" },
+            { "label": "Biaya Admin Cetak Dokumen", "value": "Rp20.000" },
+            { "label": "Biaya Antar Jemput Dokumen", "value": "Rp20.000" }
+          ],
+          "sub_total_biaya_jasa_jumpapay": "Rp120.000"
+        }
+      }
     },
     {
       "id": 15,
@@ -181,7 +815,52 @@
       "kota": "Jakarta Utara",
       "status_pembayaran": "Belum Bayar",
       "platform": "Seva",
-      "harga": "Rp2.670.000"
+      "harga": "Rp2.670.000",
+      "detail": {
+        "metode_pembayaran": "Transfer",
+        "alamat_penjemputan": {
+          "kota": "Jakarta Utara",
+          "detail": "Jalan Kelapa Gading Raya No. 1, Jakarta Utara"
+        },
+        "status_detail": {
+          "status": "Verifikasi Order",
+          "status_pembayaran_detail": "Belum Bayar",
+          "kurir": "-",
+          "serah_terima_dokumen": "Dijemput"
+        },
+        "perpanjangan_pajak": {
+          "jenis_kendaraan": "Motor",
+          "nomor_plat": "B9900GH",
+          "pkb_terakhir": "Rp2.400.000",
+          "masa_berlaku_pkb": "09/30/2026",
+          "total_harga": "Rp2.500.000",
+          "biaya_jasa": "Rp170.000"
+        },
+        "dokumen_order": [
+          { "label": "Foto STNK", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+STNK+Andika" },
+          { "label": "Foto KTP", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+KTP+Andika" }
+        ],
+        "rincian_pembayaran": {
+          "biaya_pajak": [
+            { "label": "Pajak Kendaraan Bermotor (PKB)", "value": "Rp2.200.000" },
+            { "label": "Pajak Tertunggak SKP", "value": "Rp0" },
+            { "label": "Denda Pajak KB", "value": "Rp200.000" },
+            { "label": "Opsen PKB Pokok", "value": "Rp0" },
+            { "label": "Opsen PKB Denda", "value": "Rp0" },
+            { "label": "SWDKLLJ", "value": "Rp100.000" },
+            { "label": "SWDKLLJ Denda", "value": "Rp0" },
+            { "label": "Admin STNK", "value": "Rp0" },
+            { "label": "TNBK (Plat Kendaraan Baru)", "value": "Rp0" }
+          ],
+          "sub_total_biaya_pajak": "Rp2.500.000",
+          "biaya_jasa_jumpapay": [
+            { "label": "Biaya Jasa Jumpapay", "value": "Rp90.000" },
+            { "label": "Biaya Admin Cetak Dokumen", "value": "Rp30.000" },
+            { "label": "Biaya Antar Jemput Dokumen", "value": "Rp50.000" }
+          ],
+          "sub_total_biaya_jasa_jumpapay": "Rp170.000"
+        }
+      }
     },
     {
       "id": 16,
@@ -192,7 +871,52 @@
       "kota": "Jakarta Selatan",
       "status_pembayaran": "Belum Bayar",
       "platform": "Seva",
-      "harga": "Rp3.540.000"
+      "harga": "Rp3.540.000",
+      "detail": {
+        "metode_pembayaran": "Transfer",
+        "alamat_penjemputan": {
+          "kota": "Jakarta Selatan",
+          "detail": "Jalan Cilandak No. 1, Jakarta Selatan"
+        },
+        "status_detail": {
+          "status": "Verifikasi Order",
+          "status_pembayaran_detail": "Belum Bayar",
+          "kurir": "-",
+          "serah_terima_dokumen": "Dijemput"
+        },
+        "perpanjangan_pajak": {
+          "jenis_kendaraan": "Mobil",
+          "nomor_plat": "B1234IJ",
+          "pkb_terakhir": "Rp3.200.000",
+          "masa_berlaku_pkb": "10/10/2026",
+          "total_harga": "Rp3.400.000",
+          "biaya_jasa": "Rp140.000"
+        },
+        "dokumen_order": [
+          { "label": "Foto STNK", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+STNK+Nelson" },
+          { "label": "Foto KTP", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+KTP+Nelson" }
+        ],
+        "rincian_pembayaran": {
+          "biaya_pajak": [
+            { "label": "Pajak Kendaraan Bermotor (PKB)", "value": "Rp3.100.000" },
+            { "label": "Pajak Tertunggak SKP", "value": "Rp0" },
+            { "label": "Denda Pajak KB", "value": "Rp100.000" },
+            { "label": "Opsen PKB Pokok", "value": "Rp0" },
+            { "label": "Opsen PKB Denda", "value": "Rp0" },
+            { "label": "SWDKLLJ", "value": "Rp150.000" },
+            { "label": "SWDKLLJ Denda", "value": "Rp0" },
+            { "label": "Admin STNK", "value": "Rp0" },
+            { "label": "TNBK (Plat Kendaraan Baru)", "value": "Rp0" }
+          ],
+          "sub_total_biaya_pajak": "Rp3.350.000",
+          "biaya_jasa_jumpapay": [
+            { "label": "Biaya Jasa Jumpapay", "value": "Rp90.000" },
+            { "label": "Biaya Admin Cetak Dokumen", "value": "Rp20.000" },
+            { "label": "Biaya Antar Jemput Dokumen", "value": "Rp80.000" }
+          ],
+          "sub_total_biaya_jasa_jumpapay": "Rp190.000"
+        }
+      }
     },
     {
       "id": 17,
@@ -203,7 +927,52 @@
       "kota": "BSD",
       "status_pembayaran": "Belum Bayar",
       "platform": "Seva",
-      "harga": "Rp7.120.000"
+      "harga": "Rp7.120.000",
+      "detail": {
+        "metode_pembayaran": "Transfer",
+        "alamat_penjemputan": {
+          "kota": "BSD",
+          "detail": "Jalan Serpong Raya No. 1, BSD"
+        },
+        "status_detail": {
+          "status": "Verifikasi Order",
+          "status_pembayaran_detail": "Belum Bayar",
+          "kurir": "-",
+          "serah_terima_dokumen": "Dijemput"
+        },
+        "perpanjangan_pajak": {
+          "jenis_kendaraan": "Mobil",
+          "nomor_plat": "B5678KL",
+          "pkb_terakhir": "Rp6.500.000",
+          "masa_berlaku_pkb": "11/20/2026",
+          "total_harga": "Rp6.800.000",
+          "biaya_jasa": "Rp320.000"
+        },
+        "dokumen_order": [
+          { "label": "Foto STNK", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+STNK+Satria" },
+          { "label": "Foto KTP", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+KTP+Satria" }
+        ],
+        "rincian_pembayaran": {
+          "biaya_pajak": [
+            { "label": "Pajak Kendaraan Bermotor (PKB)", "value": "Rp6.200.000" },
+            { "label": "Pajak Tertunggak SKP", "value": "Rp0" },
+            { "label": "Denda Pajak KB", "value": "Rp400.000" },
+            { "label": "Opsen PKB Pokok", "value": "Rp0" },
+            { "label": "Opsen PKB Denda", "value": "Rp0" },
+            { "label": "SWDKLLJ", "value": "Rp100.000" },
+            { "label": "SWDKLLJ Denda", "value": "Rp0" },
+            { "label": "Admin STNK", "value": "Rp0" },
+            { "label": "TNBK (Plat Kendaraan Baru)", "value": "Rp0" }
+          ],
+          "sub_total_biaya_pajak": "Rp6.700.000",
+          "biaya_jasa_jumpapay": [
+            { "label": "Biaya Jasa Jumpapay", "value": "Rp150.000" },
+            { "label": "Biaya Admin Cetak Dokumen", "value": "Rp50.000" },
+            { "label": "Biaya Antar Jemput Dokumen", "value": "Rp200.000" }
+          ],
+          "sub_total_biaya_jasa_jumpapay": "Rp400.000"
+        }
+      }
     },
     {
       "id": 18,
@@ -214,7 +983,52 @@
       "kota": "Jakarta Selatan",
       "status_pembayaran": "Belum Bayar",
       "platform": "Seva",
-      "harga": "Rp11.600.000"
+      "harga": "Rp11.600.000",
+      "detail": {
+        "metode_pembayaran": "Transfer",
+        "alamat_penjemputan": {
+          "kota": "Jakarta Selatan",
+          "detail": "Jalan Pondok Labu No. 1, Jakarta Selatan"
+        },
+        "status_detail": {
+          "status": "Verifikasi Order",
+          "status_pembayaran_detail": "Belum Bayar",
+          "kurir": "-",
+          "serah_terima_dokumen": "Dijemput"
+        },
+        "perpanjangan_pajak": {
+          "jenis_kendaraan": "Mobil",
+          "nomor_plat": "B1122MN",
+          "pkb_terakhir": "Rp10.500.000",
+          "masa_berlaku_pkb": "12/25/2026",
+          "total_harga": "Rp11.000.000",
+          "biaya_jasa": "Rp600.000"
+        },
+        "dokumen_order": [
+          { "label": "Foto STNK", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+STNK+Jonathan" },
+          { "label": "Foto KTP", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+KTP+Jonathan" }
+        ],
+        "rincian_pembayaran": {
+          "biaya_pajak": [
+            { "label": "Pajak Kendaraan Bermotor (PKB)", "value": "Rp10.200.000" },
+            { "label": "Pajak Tertunggak SKP", "value": "Rp0" },
+            { "label": "Denda Pajak KB", "value": "Rp600.000" },
+            { "label": "Opsen PKB Pokok", "value": "Rp0" },
+            { "label": "Opsen PKB Denda", "value": "Rp0" },
+            { "label": "SWDKLLJ", "value": "Rp200.000" },
+            { "label": "SWDKLLJ Denda", "value": "Rp0" },
+            { "label": "Admin STNK", "value": "Rp0" },
+            { "label": "TNBK (Plat Kendaraan Baru)", "value": "Rp0" }
+          ],
+          "sub_total_biaya_pajak": "Rp11.000.000",
+          "biaya_jasa_jumpapay": [
+            { "label": "Biaya Jasa Jumpapay", "value": "Rp200.000" },
+            { "label": "Biaya Admin Cetak Dokumen", "value": "Rp50.000" },
+            { "label": "Biaya Antar Jemput Dokumen", "value": "Rp350.000" }
+          ],
+          "sub_total_biaya_jasa_jumpapay": "Rp600.000"
+        }
+      }
     },
     {
       "id": 19,
@@ -225,7 +1039,52 @@
       "kota": "PIK",
       "status_pembayaran": "Belum Bayar",
       "platform": "Seva",
-      "harga": "Rp507.000"
+      "harga": "Rp507.000",
+      "detail": {
+        "metode_pembayaran": "Transfer",
+        "alamat_penjemputan": {
+          "kota": "PIK",
+          "detail": "Jalan Muara Karang Raya No. 1, Jakarta Utara"
+        },
+        "status_detail": {
+          "status": "Verifikasi Order",
+          "status_pembayaran_detail": "Belum Bayar",
+          "kurir": "-",
+          "serah_terima_dokumen": "Dijemput"
+        },
+        "perpanjangan_pajak": {
+          "jenis_kendaraan": "Motor",
+          "nomor_plat": "B5566OP",
+          "pkb_terakhir": "Rp400.000",
+          "masa_berlaku_pkb": "01/10/2027",
+          "total_harga": "Rp450.000",
+          "biaya_jasa": "Rp57.000"
+        },
+        "dokumen_order": [
+          { "label": "Foto STNK", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+STNK+Elyas" },
+          { "label": "Foto KTP", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+KTP+Elyas" }
+        ],
+        "rincian_pembayaran": {
+          "biaya_pajak": [
+            { "label": "Pajak Kendaraan Bermotor (PKB)", "value": "Rp380.000" },
+            { "label": "Pajak Tertunggak SKP", "value": "Rp0" },
+            { "label": "Denda Pajak KB", "value": "Rp20.000" },
+            { "label": "Opsen PKB Pokok", "value": "Rp0" },
+            { "label": "Opsen PKB Denda", "value": "Rp0" },
+            { "label": "SWDKLLJ", "value": "Rp50.000" },
+            { "label": "SWDKLLJ Denda", "value": "Rp0" },
+            { "label": "Admin STNK", "value": "Rp0" },
+            { "label": "TNBK (Plat Kendaraan Baru)", "value": "Rp0" }
+          ],
+          "sub_total_biaya_pajak": "Rp450.000",
+          "biaya_jasa_jumpapay": [
+            { "label": "Biaya Jasa Jumpapay", "value": "Rp30.000" },
+            { "label": "Biaya Admin Cetak Dokumen", "value": "Rp15.000" },
+            { "label": "Biaya Antar Jemput Dokumen", "value": "Rp12.000" }
+          ],
+          "sub_total_biaya_jasa_jumpapay": "Rp57.000"
+        }
+      }
     },
     {
       "id": 20,
@@ -236,18 +1095,108 @@
       "kota": "Bekasi",
       "status_pembayaran": "Belum Bayar",
       "platform": "Seva",
-      "harga": "Rp3.373.000"
+      "harga": "Rp3.373.000",
+      "detail": {
+        "metode_pembayaran": "Transfer",
+        "alamat_penjemputan": {
+          "kota": "Bekasi",
+          "detail": "Jalan Raya Kalimalang No. 1, Bekasi"
+        },
+        "status_detail": {
+          "status": "Verifikasi Order",
+          "status_pembayaran_detail": "Belum Bayar",
+          "kurir": "-",
+          "serah_terima_dokumen": "Dijemput"
+        },
+        "perpanjangan_pajak": {
+          "jenis_kendaraan": "Mobil",
+          "nomor_plat": "B7788PQ",
+          "pkb_terakhir": "Rp3.000.000",
+          "masa_berlaku_pkb": "02/02/2027",
+          "total_harga": "Rp3.200.000",
+          "biaya_jasa": "Rp173.000"
+        },
+        "dokumen_order": [
+          { "label": "Foto STNK", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+STNK+Fritz" },
+          { "label": "Foto KTP", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+KTP+Fritz" }
+        ],
+        "rincian_pembayaran": {
+          "biaya_pajak": [
+            { "label": "Pajak Kendaraan Bermotor (PKB)", "value": "Rp2.900.000" },
+            { "label": "Pajak Tertunggak SKP", "value": "Rp0" },
+            { "label": "Denda Pajak KB", "value": "Rp200.000" },
+            { "label": "Opsen PKB Pokok", "value": "Rp0" },
+            { "label": "Opsen PKB Denda", "value": "Rp0" },
+            { "label": "SWDKLLJ", "value": "Rp100.000" },
+            { "label": "SWDKLLJ Denda", "value": "Rp0" },
+            { "label": "Admin STNK", "value": "Rp0" },
+            { "label": "TNBK (Plat Kendaraan Baru)", "value": "Rp0" }
+          ],
+          "sub_total_biaya_pajak": "Rp3.200.000",
+          "biaya_jasa_jumpapay": [
+            { "label": "Biaya Jasa Jumpapay", "value": "Rp100.000" },
+            { "label": "Biaya Admin Cetak Dokumen", "value": "Rp30.000" },
+            { "label": "Biaya Antar Jemput Dokumen", "value": "Rp43.000" }
+          ],
+          "sub_total_biaya_jasa_jumpapay": "Rp173.000"
+        }
+      }
     },
     {
       "id": 21,
       "tanggal": "11/07/2025",
-      "nama": "Restu",
+      "nama": "Dani Sofyan",
       "layanan": "Perpanjangan Pajak 1 Tahun",
       "no_hp": "082996476000",
       "kota": "Bekasi",
       "status_pembayaran": "Sedang Diproses",
       "platform": "Seva",
-      "harga": "Rp3.373.000"
+      "harga": "Rp3.373.000",
+      "detail": {
+        "metode_pembayaran": "Transfer",
+        "alamat_penjemputan": {
+          "kota": "Bekasi",
+          "detail": "Jalan Pondok Gede Raya No. 1, Bekasi"
+        },
+        "status_detail": {
+          "status": "Sedang Diproses",
+          "status_pembayaran_detail": "Sudah Bayar",
+          "kurir": "Budi",
+          "serah_terima_dokumen": "Diambil Kurir"
+        },
+        "perpanjangan_pajak": {
+          "jenis_kendaraan": "Mobil",
+          "nomor_plat": "B1133RS",
+          "pkb_terakhir": "Rp3.000.000",
+          "masa_berlaku_pkb": "03/10/2027",
+          "total_harga": "Rp3.200.000",
+          "biaya_jasa": "Rp173.000"
+        },
+        "dokumen_order": [
+          { "label": "Foto STNK", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+STNK+Dani" },
+          { "label": "Foto KTP", "url": "https://placehold.co/400x300/e2e8f0/0f172a?text=Foto+KTP+Dani" }
+        ],
+        "rincian_pembayaran": {
+          "biaya_pajak": [
+            { "label": "Pajak Kendaraan Bermotor (PKB)", "value": "Rp2.900.000" },
+            { "label": "Pajak Tertunggak SKP", "value": "Rp0" },
+            { "label": "Denda Pajak KB", "value": "Rp200.000" },
+            { "label": "Opsen PKB Pokok", "value": "Rp0" },
+            { "label": "Opsen PKB Denda", "value": "Rp0" },
+            { "label": "SWDKLLJ", "value": "Rp100.000" },
+            { "label": "SWDKLLJ Denda", "value": "Rp0" },
+            { "label": "Admin STNK", "value": "Rp0" },
+            { "label": "TNBK (Plat Kendaraan Baru)", "value": "Rp0" }
+          ],
+          "sub_total_biaya_pajak": "Rp3.200.000",
+          "biaya_jasa_jumpapay": [
+            { "label": "Biaya Jasa Jumpapay", "value": "Rp100.000" },
+            { "label": "Biaya Admin Cetak Dokumen", "value": "Rp30.000" },
+            { "label": "Biaya Antar Jemput Dokumen", "value": "Rp43.000" }
+          ],
+          "sub_total_biaya_jasa_jumpapay": "Rp173.000"
+        }
+      }
     }
   ]
 }
