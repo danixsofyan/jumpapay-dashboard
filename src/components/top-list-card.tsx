@@ -9,14 +9,16 @@ interface ListItem {
 interface TopListCardProps {
   title: string;
   data: ListItem[];
+  showDatePicker?: boolean;
 }
 
-const TopListCard = ({ title, data }: TopListCardProps) => {
+const TopListCard = ({ title, data, showDatePicker = true }: TopListCardProps) => {
   return (
     <Card className="bg-white dark:bg-neutral-800 border-none">
       <CardHeader className="flex flex-row items-center justify-between">
           <CardTitle className="text-base font-semibold text-gray-800 dark:text-white">{title}</CardTitle>
-          <DateRangePicker />
+          
+          {showDatePicker && <DateRangePicker />}
       </CardHeader>
       <CardContent>
         <ul className="space-y-4">

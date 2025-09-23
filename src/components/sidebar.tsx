@@ -27,20 +27,28 @@ interface MenuItem {
 }
 
 const merchants = [
-  { id: "gamaloka", name: "Gamaloka", logoUrl: "/images/logo-gamaloka.png", logoDarkUrl: "/images/logo-gamaloka.png" },
   { id: "jumpapay", name: "Jumpapay", logoUrl: "/images/logo-jumpapay.svg", logoDarkUrl: "/images/logo-jumpapay.svg" },
+  { id: "gamaloka", name: "Gamaloka", logoUrl: "/images/logo-gamaloka.png", logoDarkUrl: "/images/logo-gamaloka.png" },
+];
+
+const orderTypes = [
+  { id: "b2c", name: "B2C", href: "/orders/b2c" },
+  { id: "b2b", name: "B2B", href: "/orders/b2b" },
 ];
 
 const Sidebar = () => {
   const pathname = usePathname();
-  const [popoverOpen, setPopoverOpen] = React.useState(false);
+  const [merchantPopoverOpen, setMerchantPopoverOpen] = React.useState(false);
+  const [ordersPopoverOpen, setOrdersPopoverOpen] = React.useState(false);
+
   const [selectedMerchant, setSelectedMerchant] = React.useState(merchants[0]);
+  const [selectedOrderType, setSelectedOrderType] = React.useState(orderTypes[0]);
   const { theme } = useTheme();
 
   const logoSrc = theme === 'dark' ? "/images/logo-jumpapay.svg" : "/images/logo-jumpapay.svg";
 
   return (
-    <aside className="hidden lg:flex bg-white dark:bg-neutral-800 w-24 p-6 flex-col items-center rounded-2xl sticky top-6 h-[calc(100vh-3rem)]">
+    <aside className="hidden lg:flex bg-white dark:bg-black w-24 p-6 flex-col items-center rounded-2xl sticky top-6 h-[calc(100vh-3rem)]">
       
       <div className="mb-12">
         <Image alt="Main Logo" height={41} src={logoSrc} width={48} />
@@ -50,7 +58,7 @@ const Sidebar = () => {
         {menuItems.map((item: MenuItem) => {
           if (item.id === 'switch') {
             return (
-              <Popover key={item.id} open={popoverOpen} onOpenChange={setPopoverOpen}>
+              <Popover key={item.id} open={merchantPopoverOpen} onOpenChange={setMerchantPopoverOpen}>
                 <PopoverTrigger asChild>
                   <Button
                     variant="ghost"
@@ -73,13 +81,53 @@ const Sidebar = () => {
                         variant="ghost"
                         onClick={() => {
                           setSelectedMerchant(merchant);
-                          setPopoverOpen(false);
+                          setMerchantPopoverOpen(false);
                         }}
                         className="w-full justify-start gap-2 hover:bg-gray-100 dark:hover:bg-zinc-800 dark:text-gray-200"
                       >
                         <Image src={theme === 'dark' && merchant.logoDarkUrl ? merchant.logoDarkUrl : merchant.logoUrl} alt={merchant.name} width={20} height={20} />
                         {merchant.name}
                         <Check className={cn("ml-auto h-4 w-4", selectedMerchant.id === merchant.id ? "opacity-100" : "opacity-0")} />
+                      </Button>
+                    ))}
+                  </div>
+                </PopoverContent>
+              </Popover>
+            );
+          }
+          
+          if (item.id === 'orders') {
+            return (
+              <Popover key={item.id} open={ordersPopoverOpen} onOpenChange={setOrdersPopoverOpen}>
+                <PopoverTrigger asChild>
+                  <Button
+                    variant="ghost"
+                    className={cn("h-12 w-12 rounded-lg", pathname.startsWith(item.href) ? "bg-[#E0F6FF] text-[#69C5EB] hover:bg-[#d0f1fe] hover:text-[#69C5EB] dark:bg-zinc-900 dark:text-[#69C5EB] dark:hover:bg-zinc-800" : "text-gray-400 hover:bg-gray-100 dark:text-gray-500 dark:hover:bg-zinc-900")}
+                  >
+                    <Icon icon={item.icon} className="size-6" />
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-[200px] p-4 bg-white dark:bg-zinc-900 border-none text-black dark:text-white" side="right" align="start">
+                  <div className="flex items-center gap-2 mb-4">
+                    <Icon icon="tabler:checklist" className="h-5 w-5 text-sky-600 dark:text-sky-400" />
+                    <p className="font-bold text-xs">Orders</p>
+                  </div>
+                  <div className="flex flex-col space-y-1">
+                    {orderTypes.map((orderType) => (
+                      <Button
+                        key={orderType.id}
+                        variant="ghost"
+                        onClick={() => {
+                          setSelectedOrderType(orderType);
+                          setOrdersPopoverOpen(false);
+                        }}
+                        asChild
+                        className="w-full justify-start gap-2 hover:bg-gray-100 dark:hover:bg-zinc-800 dark:text-gray-200"
+                      >
+                        <Link href={orderType.href}>
+                          {orderType.name}
+                          <Check className={cn("ml-auto h-4 w-4", pathname === orderType.href ? "opacity-100" : "opacity-0")} />
+                        </Link>
                       </Button>
                     ))}
                   </div>
