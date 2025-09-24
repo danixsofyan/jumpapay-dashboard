@@ -46,6 +46,9 @@ const OrderTableRow: FC<OrderTableRowProps> = ({ order, variant }) => {
     );
   };
 
+  const statusB2B = isB2B ? 'status_b2b' in order ? order.status_b2b : undefined : undefined;
+  const statusB2C = isB2B ? undefined : 'status_pembayaran' in order ? order.status_pembayaran : undefined;
+
   return (
     <tr className="bg-white dark:bg-transparent border-b dark:border-neutral-700 hover:bg-gray-50 dark:hover:bg-neutral-700/50">
       {isB2B ? (
@@ -61,7 +64,7 @@ const OrderTableRow: FC<OrderTableRowProps> = ({ order, variant }) => {
           <td className="px-6 py-4 hidden xl:table-cell">{order.platform}</td>
           <td className="px-6 py-4 hidden xl:table-cell font-semibold text-gray-900 dark:text-white">{order.harga}</td>
           <td className="px-6 py-4 hidden xl:table-cell">
-            <OrderStatusPill status={order.status_b2b} />
+            {statusB2B && <OrderStatusPill status={statusB2B} />}
           </td>
         </>
       ) : (
@@ -72,7 +75,7 @@ const OrderTableRow: FC<OrderTableRowProps> = ({ order, variant }) => {
           <td className="px-6 py-4 hidden md:table-cell">{order.no_hp}</td>
           <td className="px-6 py-4 hidden md:table-cell">{order.kota}</td>
           <td className="px-6 py-4 hidden md:table-cell">
-            <OrderStatusPill status={order.status_pembayaran} />
+            {statusB2C && <OrderStatusPill status={statusB2C} />}
           </td>
           <td className="px-6 py-4 hidden md:table-cell">{order.platform}</td>
           <td className="px-6 py-4 hidden md:table-cell font-semibold text-gray-900 dark:text-white">{order.harga}</td>
