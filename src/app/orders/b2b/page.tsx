@@ -17,7 +17,7 @@ export default function B2BPage() {
                 ...b2bData,
                 orders: b2bData.orders.map((order) => ({
                   ...order,
-                  status_pembayaran: order.status_pembayaran as
+                  status_pembayaran: order.status_b2b as
                     | "Belum Bayar"
                     | "Sudah Bayar"
                     | "Sedang Diproses"
