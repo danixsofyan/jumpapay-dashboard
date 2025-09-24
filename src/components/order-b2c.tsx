@@ -4,16 +4,34 @@ import type { FC } from 'react';
 import StatCard from '@/components/stat-card';
 import TopListCard from '@/components/top-list-card';
 import OrderTable from '@/components/order-table';
+import type { Order as OrderType } from '@/types/order-types';
 
 interface Stat { id: string; label: string; value: string; icon: string; }
 interface OrderListItem { label: string; value: string; }
-interface Order { id: number; tanggal: string; nama: string; layanan: string; no_hp: string; kota: string; status_pembayaran: 'Belum Bayar' | 'Sudah Bayar' | 'Sedang Diproses' | 'Selesai'; platform: string; harga: string; }
-interface OrderB2CProps { data: { summary_stats: Stat[]; list_order: OrderListItem[]; orders: Order[]; }; }
+interface LocalOrder {
+    id: number;
+    tanggal: string;
+    nama: string;
+    layanan: string;
+    no_hp: string;
+    kota: string;
+    status_pembayaran: 'Belum Bayar' | 'Sudah Bayar' | 'Sedang Diproses' | 'Selesai';
+    platform: string;
+    harga: string;
+}
+
+interface OrderB2CProps { data: { summary_stats: Stat[]; list_order: OrderListItem[]; orders: LocalOrder[]; }; }
 
 const OrderB2C: FC<OrderB2CProps> = ({ data }) => {
   const listOrderData = (data?.list_order || []).map(item => ({
     name: item.label,
     value: item.value,
+  }));
+
+  // Map the local orders and add the required 'variant' property
+  const formattedOrders = (data?.orders || []).map(order => ({
+    ...order,
+    variant: 'b2c',
   }));
 
   return (
@@ -37,7 +55,7 @@ const OrderB2C: FC<OrderB2CProps> = ({ data }) => {
         />
       </div>
 
-      <OrderTable orders={data?.orders} variant="b2c"/>
+      <OrderTable orders={formattedOrders as OrderType[]} variant="b2c" />
     </div>
   );
 };

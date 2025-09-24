@@ -3,6 +3,7 @@
 import { FC } from 'react';
 import { ArrowLeft, Download } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 interface Order { 
     id: number;
@@ -224,7 +225,15 @@ const OrderDetail: FC<OrderDetailProps> = ({ order, title }) => {
                 <h2 className="text-lg font-semibold text-gray-900 dark:text-neutral-100 mb-4">Dokumen Order</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                     {detail.dokumen_order.map((doc, index) => (
-                        <img key={index} src={doc.url} alt={doc.label} className="w-full h-auto rounded-lg shadow-sm" />
+                        <Image
+                        key={index}
+                        src={doc.url}
+                        alt={doc.label}
+                        width={400} // Add width property
+                        height={300} // Add height property
+                        className="w-full h-auto rounded-lg shadow-sm"
+                        unoptimized
+                        />
                     ))}
                 </div>
             </div>

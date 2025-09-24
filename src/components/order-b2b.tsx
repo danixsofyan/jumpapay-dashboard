@@ -4,16 +4,36 @@ import type { FC } from 'react';
 import StatCard from '@/components/stat-card';
 import TopListCard from '@/components/top-list-card';
 import OrderTable from '@/components/order-table';
+import type { Order as OrderType } from '@/types/order-types';
 
 interface Stat { id: string; label: string; value: string; icon: string; }
 interface OrderListItem { label: string; value: string; }
-interface Order { id: number; tanggal: string; nama: string; layanan: string; no_hp: string; kota: string; status_pembayaran: 'Belum Bayar' | 'Sudah Bayar' | 'Sedang Diproses' | 'Selesai'; platform: string; harga: string; }
-interface OrderB2BProps { data: { summary_stats: Stat[]; list_order: OrderListItem[]; orders: Order[]; }; }
+
+// Use the correct type definition that includes all B2B properties
+interface LocalOrder {
+    id: number;
+    tanggal: string;
+    nama: string;
+    layanan: string;
+    no_hp: string;
+    kota: string;
+    status_b2b: string; // The correct property for B2B
+    platform: string;
+    harga: string;
+}
+
+interface OrderB2BProps { data: { summary_stats: Stat[]; list_order: OrderListItem[]; orders: LocalOrder[]; }; }
 
 const OrderB2B: FC<OrderB2BProps> = ({ data }) => {
   const listOrderData = (data?.list_order || []).map(item => ({
     name: item.label,
     value: item.value,
+  }));
+
+  // Map the local orders and add the required 'variant' property
+  const formattedOrders = (data?.orders || []).map(order => ({
+    ...order,
+    variant: 'b2b',
   }));
 
   return (
@@ -30,14 +50,14 @@ const OrderB2B: FC<OrderB2BProps> = ({ data }) => {
           ))}
         </div>
         
-        <TopListCard 
-          title="List Order" 
+        <TopListCard
+          title="List Order"
           data={listOrderData}
-          showDatePicker={false} 
+          showDatePicker={false}
         />
       </div>
 
-      <OrderTable orders={data?.orders} variant="b2b" />
+      <OrderTable orders={formattedOrders as OrderType[]} variant="b2b" />
     </div>
   );
 };

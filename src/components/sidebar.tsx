@@ -42,7 +42,6 @@ const Sidebar = () => {
   const [ordersPopoverOpen, setOrdersPopoverOpen] = React.useState(false);
 
   const [selectedMerchant, setSelectedMerchant] = React.useState(merchants[0]);
-  const [selectedOrderType, setSelectedOrderType] = React.useState(orderTypes[0]);
   const { theme } = useTheme();
 
   const logoSrc = theme === 'dark' ? "/images/logo-jumpapay.svg" : "/images/logo-jumpapay.svg";
@@ -117,16 +116,13 @@ const Sidebar = () => {
                       <Button
                         key={orderType.id}
                         variant="ghost"
-                        onClick={() => {
-                          setSelectedOrderType(orderType);
-                          setOrdersPopoverOpen(false);
-                        }}
+                        // Removed the onClick handler
                         asChild
                         className="w-full justify-start gap-2 hover:bg-gray-100 dark:hover:bg-zinc-800 dark:text-gray-200"
                       >
-                        <Link href={orderType.href}>
+                        <Link href={orderType.href} onClick={() => setOrdersPopoverOpen(false)}>
                           {orderType.name}
-                          <Check className={cn("ml-auto h-4 w-4", pathname === orderType.href ? "opacity-100" : "opacity-0")} />
+                          <Check className={cn("ml-auto h-4 w-4", pathname.startsWith(orderType.href) ? "opacity-100" : "opacity-0")} />
                         </Link>
                       </Button>
                     ))}

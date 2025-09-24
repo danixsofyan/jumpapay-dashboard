@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useEffect, useCallback } from 'react';
 import type { FC } from 'react';
-import type { Order, OrderStatus } from '@/types/order-types';
+import type { Order, OrderStatus, B2BOrder, B2COrder } from '@/types/order-types';
 import OrderTableFilters from './order-table-filters';
 import OrderTableRow from './order-table-row';
 import { ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -20,6 +20,8 @@ const OrderTable: FC<OrderTableProps> = ({ orders, variant }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(10);
   const [searchQuery, setSearchQuery] = useState('');
+  const [selectedMonth, setSelectedMonth] = useState('');
+  const [selectedYear, setSelectedYear] = useState('');
 
   const MAIN_TABS = ['Invoicing', 'Non Invoicing'];
   const SUB_TABS = useMemo(() => {
@@ -28,7 +30,7 @@ const OrderTable: FC<OrderTableProps> = ({ orders, variant }) => {
       : ['Belum Bayar', 'Sedang Diproses', 'Selesai'];
   }, [variant]);
 
-  const statusMap: { [key: string]: OrderStatus[] } = useMemo(() => {
+  const statusMap: { [key: string]: OrderStatus[] | undefined } = useMemo(() => {
     if (variant === 'b2b') {
       return {
         'Order Masuk': ['Perlu Verifikasi', 'Konfirmasi ETLE', 'Konfirmasi Alamat'],
@@ -37,32 +39,60 @@ const OrderTable: FC<OrderTableProps> = ({ orders, variant }) => {
         'Menunggu Pembayaran': ['Menunggu Pembayaran'],
         'Selesai': ['Selesai'],
         'Cancel Order': ['Dibatalkan'],
+        'Belum Bayar': undefined,
+        'Sedang Diproses': undefined,
       };
     }
     return {
       'Belum Bayar': ['Belum Bayar'],
       'Sedang Diproses': ['Sedang Diproses', 'Sudah Bayar'],
       'Selesai': ['Selesai'],
+      'Order Masuk': undefined,
+      'Shopping Bag': undefined,
+      'Live Order': undefined,
+      'Menunggu Pembayaran': undefined,
+      'Cancel Order': undefined,
     };
   }, [variant]);
 
   const safeOrders = orders || [];
 
+  const handleFilter = (month: string, year: string) => {
+    setSelectedMonth(month);
+    setSelectedYear(year);
+    setCurrentPage(1); // Reset to first page on filter change
+  };
+
   const filteredOrders = safeOrders
     .filter(order => {
       const query = searchQuery.toLowerCase();
-      return (
+      const orderDate = new Date(order.tanggal);
+      const orderMonth = orderDate.toLocaleString('id-ID', { month: 'long' });
+      const orderYear = orderDate.getFullYear().toString();
+
+      // Filter by month and year
+      const monthMatches = !selectedMonth || orderMonth.toLowerCase() === selectedMonth.toLowerCase();
+      const yearMatches = !selectedYear || orderYear === selectedYear;
+
+      // Filter by search query
+      const searchMatches = 
         order.nama.toLowerCase().includes(query) ||
         order.layanan.toLowerCase().includes(query) ||
         order.no_hp.toLowerCase().includes(query) ||
         order.kota.toLowerCase().includes(query) ||
-        order.platform.toLowerCase().includes(query)
-      );
+        order.platform.toLowerCase().includes(query);
+
+      return monthMatches && yearMatches && searchMatches;
     })
     .filter(order => {
-      const currentStatusMap = variant === 'b2b' ? statusMap[activeSubTab] : statusMap[activeTab];
-      const orderStatusField = variant === 'b2b' ? order.status_b2b : order.status_pembayaran;
-      return currentStatusMap ? currentStatusMap.includes(orderStatusField) : false;
+      const activeTabKey = variant === 'b2b' ? activeSubTab : activeTab;
+      const validStatuses = statusMap[activeTabKey];
+      
+      if (!validStatuses) return false;
+
+      const orderStatusField = (order as B2BOrder).status_b2b || (order as B2COrder).status_pembayaran;
+      
+      return validStatuses.includes(orderStatusField);
     });
 
   const totalItems = filteredOrders.length;
@@ -91,9 +121,12 @@ const OrderTable: FC<OrderTableProps> = ({ orders, variant }) => {
       ? ["Tanggal", "Nama", "Layanan", "No. HP", "Kota", "Status Pembayaran", "Platform", "Harga"]
       : ["Tanggal", "Nama", "Layanan", "No. HP", "Kota", "Platform", "Harga", "Status"];
 
-    const data = filteredOrders.map(order => variant === 'b2c'
-      ? [order.tanggal, order.nama, order.layanan, order.no_hp, order.kota, order.status_pembayaran, order.platform, order.harga]
-      : [order.tanggal, order.nama, order.layanan, order.no_hp, order.kota, order.platform, order.harga, order.status_b2b]);
+    const data = filteredOrders.map(order => {
+      if (order.variant === 'b2c') {
+        return [order.tanggal, order.nama, order.layanan, order.no_hp, order.kota, (order as B2COrder).status_pembayaran, order.platform, order.harga];
+      }
+      return [order.tanggal, order.nama, order.layanan, order.no_hp, order.kota, order.platform, order.harga, (order as B2BOrder).status_b2b];
+    });
 
     if (format === 'csv') {
       const csvContent = "data:text/csv;charset=utf-8,"
@@ -136,7 +169,7 @@ const OrderTable: FC<OrderTableProps> = ({ orders, variant }) => {
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [activeTab, activeSubTab, searchQuery]);
+  }, [activeTab, activeSubTab, searchQuery, selectedMonth, selectedYear]);
 
   const visiblePages = useMemo(() => {
     const pages: (number | string)[] = [];
@@ -183,7 +216,7 @@ const OrderTable: FC<OrderTableProps> = ({ orders, variant }) => {
       ];
     }
     return [
-      { label: '', className: 'px-2 py-3 font-semibold sm:px-6 w-10 hidden md:table-cell' }, // Checkbox
+      { label: '', className: 'px-2 py-3 font-semibold sm:px-6 w-10 hidden md:table-cell' },
       { label: 'Tanggal', className: 'px-2 py-3 font-semibold sm:px-6' },
       { label: 'Nama', className: 'px-2 py-3 font-semibold sm:px-6' },
       { label: 'Layanan', className: 'px-2 py-3 font-semibold sm:px-6' },
@@ -255,6 +288,7 @@ const OrderTable: FC<OrderTableProps> = ({ orders, variant }) => {
           setSearchQuery={setSearchQuery}
           onExport={handleExport}
           variant={variant}
+          onFilter={handleFilter} // Fix: Pass the handleFilter function
         />
       </div>
 
