@@ -21,6 +21,13 @@
         "href": "/orders"
     },
     {
+        "id": "blasting",
+        "icon": "fluent:calendar-chat-24-regular",
+        "iconActive": "fluent:calendar-chat-24-filled",
+        "label": "Blasting",
+        "href": "/blasting"
+    },
+    {
         "id": "favorites",
         "icon": "solar:star-linear",
         "iconActive": "solar:star-bold",
