@@ -9,7 +9,6 @@ import type { Order as OrderType } from '@/types/order-types';
 interface Stat { id: string; label: string; value: string; icon: string; }
 interface OrderListItem { label: string; value: string; }
 
-// Use the correct type definition that includes all B2B properties
 interface LocalOrder {
     id: number;
     tanggal: string;
@@ -17,7 +16,7 @@ interface LocalOrder {
     layanan: string;
     no_hp: string;
     kota: string;
-    status_b2b: string; // The correct property for B2B
+    status_b2b: string;
     platform: string;
     harga: string;
 }
@@ -30,7 +29,6 @@ const OrderB2B: FC<OrderB2BProps> = ({ data }) => {
     value: item.value,
   }));
 
-  // Map the local orders and add the required 'variant' property
   const formattedOrders = (data?.orders || []).map(order => ({
     ...order,
     variant: 'b2b',

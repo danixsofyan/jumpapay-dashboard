@@ -60,7 +60,7 @@ const OrderTable: FC<OrderTableProps> = ({ orders, variant }) => {
   const handleFilter = (month: string, year: string) => {
     setSelectedMonth(month);
     setSelectedYear(year);
-    setCurrentPage(1); // Reset to first page on filter change
+    setCurrentPage(1);
   };
 
   const filteredOrders = safeOrders

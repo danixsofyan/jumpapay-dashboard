@@ -28,7 +28,6 @@ const OrderB2C: FC<OrderB2CProps> = ({ data }) => {
     value: item.value,
   }));
 
-  // Map the local orders and add the required 'variant' property
   const formattedOrders = (data?.orders || []).map(order => ({
     ...order,
     variant: 'b2c',

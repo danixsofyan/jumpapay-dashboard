@@ -116,7 +116,6 @@ const Sidebar = () => {
                       <Button
                         key={orderType.id}
                         variant="ghost"
-                        // Removed the onClick handler
                         asChild
                         className="w-full justify-start gap-2 hover:bg-gray-100 dark:hover:bg-zinc-800 dark:text-gray-200"
                       >

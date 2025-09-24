@@ -229,8 +229,8 @@ const OrderDetail: FC<OrderDetailProps> = ({ order, title }) => {
                         key={index}
                         src={doc.url}
                         alt={doc.label}
-                        width={400} // Add width property
-                        height={300} // Add height property
+                        width={400}
+                        height={300}
                         className="w-full h-auto rounded-lg shadow-sm"
                         unoptimized
                         />

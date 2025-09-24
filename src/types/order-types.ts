@@ -1,5 +1,3 @@
-// File: src/types/order-types.ts
-
 export type OrderStatus =
   | 'Belum Bayar'
   | 'Sudah Bayar'

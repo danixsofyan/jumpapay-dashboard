@@ -16,10 +16,9 @@ const OrderStatusPill: FC<OrderStatusPillProps> = ({ status }) => {
     'Konfirmasi ETLE': 'bg-red-100 text-red-800 dark:bg-red-900/50 dark:text-red-300',
     'Konfirmasi Alamat': 'bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300',
     'Dibatalkan': 'bg-gray-100 text-gray-800 dark:bg-neutral-700 dark:text-neutral-300',
-    'Menunggu Pembayaran': 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/50 dark:text-yellow-300' // Added new B2B status
+    'Menunggu Pembayaran': 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/50 dark:text-yellow-300'
   };
   
-  // A safe way to access the object property
   const finalClasses = statusClasses[status as keyof typeof statusClasses] || '';
 
   return <span className={`${baseClasses} ${finalClasses}`}>{status}</span>;
