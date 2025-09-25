@@ -33,7 +33,7 @@ const MobileHeader = () => {
   const [isOrdersOpen, setIsOrdersOpen] = React.useState(false);
   const [isSwitchOpen, setIsSwitchOpen] = React.useState(false);
 
-  const logoSrc = theme === 'dark' ? "/images/logo-jumpapay-primary.png" : "/images/logo-jumpapay-primary.png";
+  const logoSrc = theme === 'dark' ? "/images/logo-jumpapay-primary.svg" : "/images/logo-jumpapay-primary.svg";
 
   return (
     <header className="flex lg:hidden items-center justify-between p-4 bg-white dark:bg-black border-b dark:border-zinc-800 sticky top-0 z-10">

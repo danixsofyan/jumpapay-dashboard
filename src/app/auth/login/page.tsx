@@ -7,7 +7,7 @@ export default function LoginPage() {
       <div className="flex w-full max-w-sm flex-col gap-6">
         <a href="https://jumpapay.com" className="flex items-center gap-2 self-center font-medium">
           <Image
-            src="/images/logo-jumpapay-primary.png"
+            src="/images/logo-jumpapay-primary.svg"
             alt="JumpaPay Logo"
             className="mx-auto h-10 w-auto"
             width={100}

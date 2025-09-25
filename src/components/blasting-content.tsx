@@ -115,7 +115,7 @@ const BlastingContent = () => {
               id="list-whatsapp"
               value={selectedWhatsapp}
               onChange={(e) => setSelectedWhatsapp(e.target.value)}
-              className="w-full h-[40px] text-sm px-4 py-2 border border-gray-300 dark:border-neutral-600 rounded-lg bg-white dark:bg-neutral-900 focus:ring-2 focus:ring-primary focus:outline-none"
+              className="w-full h-[40px] text-sm px-4 py-2 border border-gray-300 dark:border-neutral-600 rounded-lg bg-white dark:bg-neutral-900 focus:ring-2 focus:ring-primary focus:outline-none mt-2"
             >
               {whatsappLists.map((list) => (
                 <option key={list} value={list}>
@@ -132,7 +132,7 @@ const BlastingContent = () => {
               id="pilih-template"
               value={selectedTemplate}
               onChange={(e) => setSelectedTemplate(e.target.value)}
-              className="w-full h-[40px] text-sm px-4 py-2 border border-gray-300 dark:border-neutral-600 rounded-lg bg-white dark:bg-neutral-900 focus:ring-2 focus:ring-primary focus:outline-none"
+              className="w-full h-[40px] text-sm px-4 py-2 border border-gray-300 dark:border-neutral-600 rounded-lg bg-white dark:bg-neutral-900 focus:ring-2 focus:ring-primary focus:outline-none mt-2"
             >
               {templateOptions.map((option) => (
                 <option key={option} value={option}>
@@ -174,7 +174,7 @@ const BlastingContent = () => {
                 id="kategori-user"
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full h-[40px] text-sm px-4 py-2 border border-gray-300 dark:border-neutral-600 rounded-lg bg-white dark:bg-neutral-900 focus:ring-2 focus:ring-primary focus:outline-none"
+                className="w-full h-[40px] text-sm px-4 py-2 border border-gray-300 dark:border-neutral-600 rounded-lg bg-white dark:bg-neutral-900 focus:ring-2 focus:ring-primary focus:outline-none mt-2"
               >
                 {userCategories.map((category) => (
                   <option key={category} value={category}>
@@ -200,7 +200,7 @@ const BlastingContent = () => {
                 id="delay-pesan"
                 value={selectedDelay}
                 onChange={(e) => setSelectedDelay(e.target.value)}
-                className="w-full h-[40px] text-sm px-4 py-2 border border-gray-300 dark:border-neutral-600 rounded-lg bg-white dark:bg-neutral-900 focus:ring-2 focus:ring-primary focus:outline-none"
+                className="w-full h-[40px] text-sm px-4 py-2 border border-gray-300 dark:border-neutral-600 rounded-lg bg-white dark:bg-neutral-900 focus:ring-2 focus:ring-primary focus:outline-none mt-2"
               >
                 {delayOptions.map((option) => (
                   <option key={option} value={option}>
@@ -226,7 +226,7 @@ const BlastingContent = () => {
                     setSearchQuery(e.target.value);
                     setCurrentPage(1);
                   }}
-                  className="pl-4 pr-10 py-2 w-full border border-gray-300 dark:border-neutral-600 rounded-lg bg-white dark:bg-neutral-900 focus:ring-2 focus:ring-primary focus:outline-none text-sm font-medium h-[40px]"
+                  className="pl-4 pr-10 py-2 w-full border border-gray-300 dark:border-neutral-600 rounded-lg bg-white dark:bg-neutral-900 focus:ring-2 focus:ring-primary focus:outline-none text-sm font-medium h-[40px] mt-2"
                 />
                 <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
               </div>
