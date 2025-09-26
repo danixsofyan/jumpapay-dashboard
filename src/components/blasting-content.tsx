@@ -1,8 +1,6 @@
-// Lokasi: src/components/blasting-content.tsx
-
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import { Button } from './ui/button';
 import { ChevronLeft, ChevronRight, Search } from 'lucide-react';
 
@@ -71,37 +69,6 @@ const BlastingContent = () => {
     console.log('Penerima:', selectedUsers);
     alert('Pesan berhasil dikirim!');
   };
-
-  const visiblePages = useMemo(() => {
-    const pages: (number | string)[] = [];
-    const maxVisible = 5;
-    const half = Math.floor(maxVisible / 2);
-
-    if (totalPages <= maxVisible) {
-      for (let i = 1; i <= totalPages; i++) {
-        pages.push(i);
-      }
-    } else {
-      if (currentPage <= half + 1) {
-        for (let i = 1; i <= maxVisible - 1; i++) {
-          pages.push(i);
-        }
-        pages.push('...', totalPages);
-      } else if (currentPage >= totalPages - half) {
-        pages.push(1, '...');
-        for (let i = totalPages - (maxVisible - 2); i <= totalPages; i++) {
-          pages.push(i);
-        }
-      } else {
-        pages.push(1, '...');
-        for (let i = currentPage - half + 1; i <= currentPage + half - 1; i++) {
-          pages.push(i);
-        }
-        pages.push('...', totalPages);
-      }
-    }
-    return pages;
-  }, [totalPages, currentPage]);
 
   return (
     <div className="p-6">

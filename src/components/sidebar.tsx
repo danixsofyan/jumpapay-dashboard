@@ -50,7 +50,9 @@ const Sidebar = () => {
     <aside className="hidden lg:flex bg-white dark:bg-black w-24 p-6 flex-col items-center rounded-2xl sticky top-6 h-[calc(100vh-3rem)]">
       
       <div className="mb-12">
-        <Image alt="Main Logo" height={41} src={logoSrc} width={48} />
+          <Link href="/dashboard" passHref>
+              <Image alt="Main Logo" height={41} src={logoSrc} width={48} />
+          </Link>
       </div>
 
       <nav className="flex flex-col items-center gap-6 flex-1">

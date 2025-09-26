@@ -39,7 +39,7 @@ const UserNav = () => {
         <DropdownMenuTrigger asChild>
           <Button variant="ghost" className="relative h-12 w-12 rounded-full p-0">
             <Avatar className="h-12 w-12 cursor-pointer">
-              <AvatarImage src="https://i.pravatar.cc/150" alt="User" />
+              <AvatarImage src="https://avatar.iran.liara.run/public/23" alt="User" />
             </Avatar>
           </Button>
         </DropdownMenuTrigger>

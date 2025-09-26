@@ -1,0 +1,1363 @@
+[
+    {
+        "id": 1,
+        "name": "Putra Diwangka",
+        "message": "Halo, apakah ini dengan Jumpapay?",
+        "time": "11.44 WIB",
+        "unread": 1,
+        "avatar": "https://i.pravatar.cc/150?img=1",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Halo, apakah ini dengan Jumpapay?", "time": "11:44", "date": "2025-09-26", "status": "sent"},
+            {"sender": "admin", "message": "Selamat siang, betul ini dengan Jumpapay. Ada yang bisa kami bantu?", "time": "11:45", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Julius Nino",
+        "message": "Betul, ini dengan Jumpapay",
+        "time": "11.44 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=3",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": true,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Selamat pagi admin.", "time": "11:43", "date": "2025-09-26", "status": "read"},
+            {"sender": "admin", "message": "Betul, ini dengan Jumpapay. Ada yang bisa kami bantu, Bapak Julius?", "time": "11:44", "date": "2025-09-26", "status": "read"}
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Citra Dewi",
+        "message": "Apakah bisa ganti alamat pengiriman?",
+        "time": "11.35 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=10",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-25T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Halo, saya mau ganti alamat pengiriman. Bisa dibantu?", "time": "11:34", "date": "2025-09-25", "status": "sent"},
+            {"sender": "admin", "message": "Tentu, mohon berikan nomor pesanan Anda dan alamat yang baru.", "time": "11:35", "date": "2025-09-25", "status": "sent"}
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Fandi Ahmad",
+        "message": "Pesanan saya kapan sampai ya?",
+        "time": "11.20 WIB",
+        "unread": 1,
+        "avatar": "https://i.pravatar.cc/150?img=13",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Pesanan saya kapan sampai ya?", "time": "11:20", "date": "2025-09-26", "status": "sent"},
+            {"sender": "admin", "message": "Selamat siang, boleh dibantu nomor ID pesanannya, Bapak?", "time": "11:21", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Ivan Permana",
+        "message": "Bagaimana cara menghubungi admin?",
+        "time": "11.05 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=16",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": true,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Saya butuh bantuan segera, bagaimana cara menghubungi admin?", "time": "11:04", "date": "2025-09-26", "status": "read"},
+            {"sender": "admin", "message": "Halo Bapak Ivan, Anda sedang terhubung dengan admin saat ini. Ada yang bisa kami bantu?", "time": "11:05", "date": "2025-09-26", "status": "read"}
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Lia Fitriani",
+        "message": "Terima kasih banyak!",
+        "time": "10.50 WIB",
+        "unread": 1,
+        "avatar": "https://i.pravatar.cc/150?img=19",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": false,
+        "status": "closed",
+        "date": "2025-09-25T12:00:00Z",
+        "history": [
+            {"sender": "admin", "message": "Terima kasih kembali, Ibu Lia. Senang bisa membantu.", "time": "10:49", "date": "2025-09-25", "status": "read"},
+            {"sender": "customer", "message": "Terima kasih banyak!", "time": "10:50", "date": "2025-09-25", "status": "sent"}
+        ]
+    },
+    {
+        "id": 31,
+        "name": "Rani S.",
+        "message": "Konfirmasi pembayaran saya.",
+        "time": "11.40 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=31",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": true,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Saya sudah transfer, mohon konfirmasi pembayaran saya.", "time": "11:40", "date": "2025-09-26", "status": "read"},
+            {"sender": "admin", "message": "Baik, kami cek segera, Ibu Rani.", "time": "11:41", "date": "2025-09-26", "status": "read"}
+        ]
+    },
+    {
+        "id": 34,
+        "name": "Dewi Anggraini",
+        "message": "Perlu info produk A.",
+        "time": "11.30 WIB",
+        "unread": 2,
+        "avatar": "https://i.pravatar.cc/150?img=34",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-25T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Halo, saya perlu info detail tentang produk A. Apa fiturnya?", "time": "11:30", "date": "2025-09-25", "status": "sent"},
+            {"sender": "admin", "message": "Produk A memiliki fitur unggulan X, Y, dan Z. Apakah ada pertanyaan spesifik?", "time": "11:31", "date": "2025-09-25", "status": "sent"}
+        ]
+    },
+    {
+        "id": 37,
+        "name": "Gani Maulana",
+        "message": "Bagaimana cara reset password?",
+        "time": "11.15 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=37",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": true,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "admin", "message": "Selamat pagi Bapak Gani.", "time": "11:14", "date": "2025-09-26", "status": "read"},
+            {"sender": "customer", "message": "Bagaimana cara reset password? Saya lupa.", "time": "11:15", "date": "2025-09-26", "status": "read"},
+            {"sender": "admin", "message": "Anda bisa klik 'Lupa Password' di halaman login.", "time": "11:16", "date": "2025-09-26", "status": "read"}
+        ]
+    },
+    {
+        "id": 40,
+        "name": "Juwita Sari",
+        "message": "Kapan bisa dihubungi lagi?",
+        "time": "11.00 WIB",
+        "unread": 1,
+        "avatar": "https://i.pravatar.cc/150?img=40",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": false,
+        "status": "closed",
+        "date": "2025-09-25T12:00:00Z",
+        "history": [
+            {"sender": "admin", "message": "Maaf Ibu Juwita, jam operasional kami sampai 17.00 WIB.", "time": "10:58", "date": "2025-09-25", "status": "read"},
+            {"sender": "customer", "message": "Baik, kapan saya bisa dihubungi lagi?", "time": "11:00", "date": "2025-09-25", "status": "sent"}
+        ]
+    },
+    {
+        "id": 43,
+        "name": "Maya Citra",
+        "message": "Layanan sangat cepat!",
+        "time": "10.45 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=43",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": true,
+        "status": "closed",
+        "date": "2025-09-24T12:00:00Z",
+        "history": [
+            {"sender": "admin", "message": "Apakah masalah Anda sudah teratasi, Ibu Maya?", "time": "10:44", "date": "2024-09-24", "status": "read"},
+            {"sender": "customer", "message": "Sudah, layanan sangat cepat! Terima kasih.", "time": "10:45", "date": "2024-09-24", "status": "read"}
+        ]
+    },
+    {
+        "id": 46,
+        "name": "Puspa Sari",
+        "message": "Gimana status pengiriman?",
+        "time": "10.30 WIB",
+        "unread": 4,
+        "avatar": "https://i.pravatar.cc/150?img=46",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": false,
+        "status": "closed",
+        "date": "2025-09-25T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Gimana status pengiriman pesanan saya ID #JP2004?", "time": "10:30", "date": "2025-09-25", "status": "sent"},
+            {"sender": "admin", "message": "Pengiriman Anda sudah di tangan kurir, diperkirakan sampai hari ini jam 15.00 WIB.", "time": "10:32", "date": "2025-09-25", "status": "sent"}
+        ]
+    },
+    {
+        "id": 49,
+        "name": "Sinta Dewi",
+        "message": "Terima kasih banyak!",
+        "time": "10.15 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=49",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": true,
+        "status": "closed",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "admin", "message": "Baik, Ibu Sinta. Masalah sudah teratasi. Ada lagi yang bisa kami bantu?", "time": "10:14", "date": "2025-09-26", "status": "read"},
+            {"sender": "customer", "message": "Tidak ada, terima kasih banyak!", "time": "10:15", "date": "2025-09-26", "status": "read"}
+        ]
+    },
+    {
+        "id": 52,
+        "name": "Vina Lestari",
+        "message": "Halo, apakah ini dengan Jumpapay?",
+        "time": "10.00 WIB",
+        "unread": 1,
+        "avatar": "https://i.pravatar.cc/150?img=52",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": false,
+        "status": "closed",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Halo, apakah ini dengan Jumpapay?", "time": "10:00", "date": "2025-09-26", "status": "sent"},
+            {"sender": "admin", "message": "Betul, ini layanan pelanggan Jumpapay. Ada yang bisa kami bantu?", "time": "10:01", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 55,
+        "name": "Yudi Candra",
+        "message": "Pesan saya belum dibaca.",
+        "time": "09.45 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=55",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": true,
+        "status": "closed",
+        "date": "2025-09-24T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Saya sudah kirim detail masalah, pesan saya belum dibaca.", "time": "09:44", "date": "2024-09-24", "status": "read"},
+            {"sender": "admin", "message": "Mohon maaf atas ketidaknyamanannya, Bapak. Kami sedang proses data Anda.", "time": "09:45", "date": "2024-09-24", "status": "read"}
+        ]
+    },
+    {
+        "id": 58,
+        "name": "Bima Satria",
+        "message": "Masih menunggu respon.",
+        "time": "09.30 WIB",
+        "unread": 2,
+        "avatar": "https://i.pravatar.cc/150?img=58",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": false,
+        "status": "closed",
+        "date": "2025-09-25T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Saya masih menunggu respon untuk ID 5543.", "time": "09:30", "date": "2025-09-25", "status": "sent"},
+            {"sender": "admin", "message": "Baik, Bapak Bima. Tim kami akan segera menanggapi, mohon ditunggu.", "time": "09:32", "date": "2025-09-25", "status": "sent"}
+        ]
+    },
+    {
+        "id": 61,
+        "name": "Ahmad Syafiq",
+        "message": "Minta tolong di cek lagi.",
+        "time": "09.35 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=61",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": true,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Mohon tolong dicek lagi masalah tagihan saya.", "time": "09:35", "date": "2025-09-26", "status": "read"},
+            {"sender": "admin", "message": "Siap, Bapak Ahmad. Kami sedang memverifikasi data Anda. Mohon ditunggu 2 menit.", "time": "09:37", "date": "2025-09-26", "status": "read"}
+        ]
+    },
+    {
+        "id": 64,
+        "name": "Dian Permata",
+        "message": "Terima kasih atas infonya.",
+        "time": "09.20 WIB",
+        "unread": 1,
+        "avatar": "https://i.pravatar.cc/150?img=64",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "admin", "message": "Informasi produk sudah kami kirim via email, Ibu Dian.", "time": "09:18", "date": "2025-09-26", "status": "read"},
+            {"sender": "customer", "message": "Terima kasih atas infonya.", "time": "09:20", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 67,
+        "name": "Umar Bachtiar",
+        "message": "Mohon info jam operasional.",
+        "time": "10.05 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=67",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": true,
+        "status": "active",
+        "date": "2025-09-24T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Mohon info jam operasional CS Jumpapay.", "time": "10:05", "date": "2024-09-24", "status": "read"},
+            {"sender": "admin", "message": "Jam operasional kami: Senin - Jumat, 08.00 - 17.00 WIB.", "time": "10:07", "date": "2024-09-24", "status": "read"}
+        ]
+    },
+    {
+        "id": 70,
+        "name": "Jessica Alba",
+        "message": "Perlu panduan aplikasi.",
+        "time": "07.50 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=70",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": true,
+        "status": "closed",
+        "date": "2025-09-24T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Saya pengguna baru. Perlu panduan aplikasi.", "time": "07:50", "date": "2024-09-24", "status": "read"},
+            {"sender": "admin", "message": "Tentu, kami kirim link panduan di sini. Selamat mencoba!", "time": "07:52", "date": "2024-09-24", "status": "read"}
+        ]
+    },
+    {
+        "id": 71,
+        "name": "Chris Evans",
+        "message": "Perlu info diskon.",
+        "time": "08.25 WIB",
+        "unread": 1,
+        "avatar": "https://i.pravatar.cc/150?img=11",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Apakah ada info diskon bulan ini?", "time": "08:25", "date": "2025-09-26", "status": "sent"},
+            {"sender": "admin", "message": "Ya, kami ada promo *cashback* 15% untuk pengguna baru. Mau tahu lebih lanjut?", "time": "08:26", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 72,
+        "name": "Meryl Streep",
+        "message": "Saya butuh bantuan cepat.",
+        "time": "07.35 WIB",
+        "unread": 3,
+        "avatar": "https://i.pravatar.cc/150?img=21",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Saya butuh bantuan cepat, ada masalah dengan akun saya!", "time": "07:35", "date": "2025-09-26", "status": "sent"},
+            {"sender": "admin", "message": "Mohon tenang, Ibu. Kami segera bantu. Bisa jelaskan kendalanya?", "time": "07:37", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 73,
+        "name": "Orlando Bloom",
+        "message": "Perlu verifikasi akun.",
+        "time": "07.25 WIB",
+        "unread": 1,
+        "avatar": "https://i.pravatar.cc/150?img=31",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Perlu verifikasi akun saya. Sudah kirim dokumen.", "time": "07:25", "date": "2025-09-26", "status": "sent"},
+            {"sender": "admin", "message": "Dokumen sedang diproses, Bapak Orlando. Akan kami kabari setelah selesai.", "time": "07:27", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 74,
+        "name": "Robert Downey Jr.",
+        "message": "Mohon info terbaru.",
+        "time": "07.10 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=41",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": true,
+        "status": "closed",
+        "date": "2025-09-25T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Mohon info terbaru mengenai maintenance sistem.", "time": "07:10", "date": "2025-09-25", "status": "read"},
+            {"sender": "admin", "message": "Maintenance sudah selesai, sistem sudah kembali normal. Terima kasih!", "time": "07:12", "date": "2025-09-25", "status": "read"}
+        ]
+    },
+    {
+        "id": 75,
+        "name": "Quincy Jones",
+        "message": "Kapan bisa dihubungi?",
+        "time": "07.15 WIB",
+        "unread": 2,
+        "avatar": "https://i.pravatar.cc/150?img=51",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Saya sudah kirim data. Kapan saya bisa dihubungi balik?", "time": "07:15", "date": "2025-09-26", "status": "sent"},
+            {"sender": "admin", "message": "Kami akan hubungi Anda via telepon dalam 30 menit ke depan, Bapak.", "time": "07:17", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 76,
+        "name": "Tom Hanks",
+        "message": "Saya tunggu konfirmasi.",
+        "time": "07.00 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=61",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": true,
+        "status": "closed",
+        "date": "2025-09-24T12:00:00Z",
+        "history": [
+            {"sender": "admin", "message": "Konfirmasi akun Anda sudah berhasil, Bapak Tom.", "time": "06:58", "date": "2024-09-24", "status": "read"},
+            {"sender": "customer", "message": "Baik, saya tunggu konfirmasi emailnya.", "time": "07:00", "date": "2024-09-24", "status": "read"}
+        ]
+    },
+    {
+        "id": 77,
+        "name": "Anton Saputra",
+        "message": "Tolong informasinya.",
+        "time": "11.05 WIB",
+        "unread": 2,
+        "avatar": "https://i.pravatar.cc/150?img=12",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Tolong informasinya mengenai perubahan biaya langganan.", "time": "11:05", "date": "2025-09-26", "status": "sent"},
+            {"sender": "admin", "message": "Perubahan biaya akan berlaku mulai bulan depan. Detailnya akan kami kirim ke email Anda.", "time": "11:07", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 78,
+        "name": "Bella Chandra",
+        "message": "Apakah ada solusi lain?",
+        "time": "11.00 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=22",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": true,
+        "status": "closed",
+        "date": "2025-09-25T12:00:00Z",
+        "history": [
+            {"sender": "admin", "message": "Solusi A hanya dapat dilakukan jika Anda memenuhi syarat B. Apakah ada solusi lain yang bisa ditawarkan?", "time": "10:58", "date": "2025-09-25", "status": "read"},
+            {"sender": "customer", "message": "Apakah ada solusi lain yang lebih mudah?", "time": "11:00", "date": "2025-09-25", "status": "read"}
+        ]
+    },
+    {
+        "id": 79,
+        "name": "Carissa Dewi",
+        "message": "Sudah di cek, terima kasih.",
+        "time": "10.55 WIB",
+        "unread": 1,
+        "avatar": "https://i.pravatar.cc/150?img=32",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "admin", "message": "Mohon dicek kembali. Harusnya sudah teratasi.", "time": "10:53", "date": "2025-09-26", "status": "read"},
+            {"sender": "customer", "message": "Sudah di cek, terima kasih.", "time": "10:55", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 80,
+        "name": "Daffa Akbar",
+        "message": "Mohon konfirmasi pesanan.",
+        "time": "10.50 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=42",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": true,
+        "status": "active",
+        "date": "2025-09-25T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Mohon konfirmasi pesanan saya ID 7799.", "time": "10:50", "date": "2025-09-25", "status": "read"},
+            {"sender": "admin", "message": "Pesanan Anda sudah kami proses dan siap kirim, Bapak Daffa.", "time": "10:52", "date": "2025-09-25", "status": "read"}
+        ]
+    },
+    {
+        "id": 81,
+        "name": "Elsa Putri",
+        "message": "Halo, saya nasabah lama.",
+        "time": "10.45 WIB",
+        "unread": 4,
+        "avatar": "https://i.pravatar.cc/150?img=52",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": false,
+        "status": "closed",
+        "date": "2025-09-24T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Halo, saya nasabah lama. Saya punya keluhan.", "time": "10:45", "date": "2024-09-24", "status": "sent"},
+            {"sender": "admin", "message": "Selamat pagi, Ibu Elsa. Mohon sebutkan ID pelanggan Anda agar kami dapat memprioritaskan bantuan.", "time": "10:47", "date": "2024-09-24", "status": "sent"}
+        ]
+    },
+    {
+        "id": 82,
+        "name": "Fahri Huda",
+        "message": "Masih ada kendala.",
+        "time": "10.40 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=62",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": true,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "admin", "message": "Mohon maaf, apakah kendala di sistem masih berlanjut?", "time": "10:38", "date": "2025-09-26", "status": "read"},
+            {"sender": "customer", "message": "Ya, masih ada kendala saat melakukan checkout.", "time": "10:40", "date": "2025-09-26", "status": "read"}
+        ]
+    },
+    {
+        "id": 83,
+        "name": "Gilang Ramadhan",
+        "message": "Saya tidak sengaja menekan.",
+        "time": "10.35 WIB",
+        "unread": 1,
+        "avatar": "https://i.pravatar.cc/150?img=7",
+        "assignedTo": "me",
+        "assignedByName": "Anda",
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Maaf, saya tidak sengaja menekan tombol 'Beli' dua kali.", "time": "10:35", "date": "2025-09-26", "status": "sent"},
+            {"sender": "admin", "message": "Tenang, Bapak. Pesanan ganda sudah kami batalkan. Hanya 1 pesanan yang diproses.", "time": "10:37", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Ivony Anastasia",
+        "message": "Halo, apakah ini dengan Jumpapay?",
+        "time": "11.44 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=2",
+        "assignedTo": "other",
+        "assignedByName": "Kinara",
+        "isRead": false,
+        "status": "closed",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Halo, apakah ini dengan Jumpapay?", "time": "11:44", "date": "2025-09-26", "status": "sent"},
+            {"sender": "admin", "message": "Betul, ini dengan Jumpapay. Admin Kinara siap membantu.", "time": "11:46", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Kelvin Ananta Noor",
+        "message": "Halo, apakah ini dengan Jumpapay?",
+        "time": "11.44 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=4",
+        "assignedTo": "other",
+        "assignedByName": "Tiara",
+        "isRead": false,
+        "status": "closed",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Halo, apakah ini dengan Jumpapay?", "time": "11:44", "date": "2025-09-26", "status": "sent"},
+            {"sender": "admin", "message": "Ya, Bapak Kelvin. Ada yang bisa dibantu oleh Tiara?", "time": "11:45", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Fariz Sidiq",
+        "message": "Halo, apakah ini dengan Jumpapay?",
+        "time": "11.44 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=5",
+        "assignedTo": "other",
+        "assignedByName": "Kinara",
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Halo, apakah ini dengan Jumpapay?", "time": "11:44", "date": "2025-09-26", "status": "sent"},
+            {"sender": "admin", "message": "Iya, betul Bapak Fariz. Ada yang bisa Kinara bantu?", "time": "11:46", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Aditya Julianto",
+        "message": "Halo, apakah ini dengan Jumpapay?",
+        "time": "11.44 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=6",
+        "assignedTo": "other",
+        "assignedByName": "Tiara",
+        "isRead": false,
+        "status": "closed",
+        "date": "2025-09-25T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Halo, apakah ini dengan Jumpapay?", "time": "11:44", "date": "2025-09-25", "status": "sent"},
+            {"sender": "admin", "message": "Ya, Bapak Aditya. Kami siap membantu.", "time": "11:46", "date": "2025-09-25", "status": "sent"}
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Doni Pratama",
+        "message": "Saya butuh bantuan untuk login.",
+        "time": "11.30 WIB",
+        "unread": 3,
+        "avatar": "https://i.pravatar.cc/150?img=11",
+        "assignedTo": "other",
+        "assignedByName": "Kinara",
+        "isRead": false,
+        "status": "closed",
+        "date": "2025-09-24T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Saya tidak bisa login, butuh bantuan.", "time": "11:30", "date": "2024-09-24", "status": "sent"},
+            {"sender": "admin", "message": "Baik, Bapak Doni. Apakah Anda sudah mencoba fitur lupa password?", "time": "11:32", "date": "2024-09-24", "status": "sent"}
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Gita Sanjaya",
+        "message": "Terima kasih atas bantuannya!",
+        "time": "11.15 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=14",
+        "assignedTo": "other",
+        "assignedByName": "Tiara",
+        "isRead": true,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "admin", "message": "Sama-sama, Ibu Gita. Senang masalah Anda teratasi.", "time": "11:14", "date": "2025-09-26", "status": "read"},
+            {"sender": "customer", "message": "Terima kasih atas bantuannya!", "time": "11:15", "date": "2025-09-26", "status": "read"}
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Joko Susilo",
+        "message": "Halo, apakah ini dengan Jumpapay?",
+        "time": "11.00 WIB",
+        "unread": 1,
+        "avatar": "https://i.pravatar.cc/150?img=17",
+        "assignedTo": "other",
+        "assignedByName": "Kinara",
+        "isRead": false,
+        "status": "closed",
+        "date": "2025-09-25T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Halo, apakah ini dengan Jumpapay?", "time": "11:00", "date": "2025-09-25", "status": "sent"},
+            {"sender": "admin", "message": "Ya, Bapak Joko. Ada yang bisa dibantu?", "time": "11:02", "date": "2025-09-25", "status": "sent"}
+        ]
+    },
+    {
+        "id": 20,
+        "name": "Miko Wijaya",
+        "message": "Saya ingin bertanya tentang produk.",
+        "time": "10.45 WIB",
+        "unread": 1,
+        "avatar": "https://i.pravatar.cc/150?img=20",
+        "assignedTo": "other",
+        "assignedByName": "Tiara",
+        "isRead": false,
+        "status": "closed",
+        "date": "2025-09-24T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Saya ingin bertanya tentang produk X, apakah stoknya tersedia?", "time": "10:45", "date": "2024-09-24", "status": "sent"},
+            {"sender": "admin", "message": "Selamat pagi, Bapak. Produk X saat ini sedang *pre-order*.", "time": "10:47", "date": "2024-09-24", "status": "sent"}
+        ]
+    },
+    {
+        "id": 62,
+        "name": "Rendra P.",
+        "message": "Perlu dibantu dengan masalah ini.",
+        "time": "11.40 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=32",
+        "assignedTo": "other",
+        "assignedByName": "Tiara",
+        "isRead": true,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Perlu dibantu dengan masalah pengembalian dana.", "time": "11:40", "date": "2025-09-26", "status": "read"},
+            {"sender": "admin", "message": "Baik, Bapak Rendra. Kami akan cek. Mohon berikan ID transaksi Anda.", "time": "11:42", "date": "2025-09-26", "status": "read"}
+        ]
+    },
+    {
+        "id": 65,
+        "name": "Tono Wijaya",
+        "message": "Butuh support segera.",
+        "time": "11.25 WIB",
+        "unread": 3,
+        "avatar": "https://i.pravatar.cc/150?img=35",
+        "assignedTo": "other",
+        "assignedByName": "Kinara",
+        "isRead": false,
+        "status": "closed",
+        "date": "2025-09-25T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Butuh support segera! Akun saya terblokir.", "time": "11:25", "date": "2025-09-25", "status": "sent"},
+            {"sender": "admin", "message": "Mohon maaf atas kendalanya. Kami bantu proses pemulihan akun Anda.", "time": "11:27", "date": "2025-09-25", "status": "sent"}
+        ]
+    },
+    {
+        "id": 68,
+        "name": "Ratna C.",
+        "message": "Perlu ganti data akun.",
+        "time": "11.10 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=38",
+        "assignedTo": "other",
+        "assignedByName": "Tiara",
+        "isRead": true,
+        "status": "closed",
+        "date": "2025-09-24T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Saya perlu ganti data akun, khususnya nomor telepon.", "time": "11:10", "date": "2024-09-24", "status": "read"},
+            {"sender": "admin", "message": "Baik, Ibu Ratna. Kami akan kirimkan tautan verifikasi ke email lama Anda.", "time": "11:12", "date": "2024-09-24", "status": "read"}
+        ]
+    },
+    {
+        "id": 71,
+        "name": "Carissa Dewi",
+        "message": "Sudah di cek, terima kasih.",
+        "time": "10.55 WIB",
+        "unread": 1,
+        "avatar": "https://i.pravatar.cc/150?img=41",
+        "assignedTo": "other",
+        "assignedByName": "Kinara",
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "admin", "message": "Transfer Anda sudah masuk ke rekening tujuan. Mohon dicek.", "time": "10:53", "date": "2025-09-26", "status": "read"},
+            {"sender": "customer", "message": "Sudah di cek, terima kasih.", "time": "10:55", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 74,
+        "name": "Fahri Huda",
+        "message": "Masih ada kendala.",
+        "time": "10.40 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=44",
+        "assignedTo": "other",
+        "assignedByName": "Tiara",
+        "isRead": true,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Saya sudah coba langkah 1 dan 2, tapi masih ada kendala.", "time": "10:40", "date": "2025-09-26", "status": "read"},
+            {"sender": "admin", "message": "Baik, kami eskalasi ke tim teknis. Mohon ditunggu 5 menit.", "time": "10:42", "date": "2025-09-26", "status": "read"}
+        ]
+    },
+    {
+        "id": 77,
+        "name": "Intan Permata",
+        "message": "Minta tolong segera direspon.",
+        "time": "10.25 WIB",
+        "unread": 3,
+        "avatar": "https://i.pravatar.cc/150?img=47",
+        "assignedTo": "other",
+        "assignedByName": "Kinara",
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-25T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Sudah 30 menit belum ada balasan. Minta tolong segera direspon.", "time": "10:25", "date": "2025-09-25", "status": "sent"},
+            {"sender": "admin", "message": "Mohon maaf, Ibu Intan. Kami sedang memproses antrian. Ada yang bisa kami bantu secara singkat?", "time": "10:27", "date": "2025-09-25", "status": "sent"}
+        ]
+    },
+    {
+        "id": 80,
+        "name": "Nanda Rizky",
+        "message": "Tolong arahkan ke divisi terkait.",
+        "time": "10.10 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=50",
+        "assignedTo": "other",
+        "assignedByName": "Tiara",
+        "isRead": true,
+        "status": "closed",
+        "date": "2025-09-24T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Ini masalah teknis. Tolong arahkan ke divisi terkait.", "time": "10:10", "date": "2024-09-24", "status": "read"},
+            {"sender": "admin", "message": "Baik, Bapak Nanda. Kami sudah kirim data Anda ke tim teknis. Mereka akan hubungi Anda.", "time": "10:12", "date": "2024-09-24", "status": "read"}
+        ]
+    },
+    {
+        "id": 83,
+        "name": "Quentin R.",
+        "message": "Ada penawaran menarik?",
+        "time": "09.55 WIB",
+        "unread": 1,
+        "avatar": "https://i.pravatar.cc/150?img=53",
+        "assignedTo": "other",
+        "assignedByName": "Kinara",
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Halo, apakah ada penawaran menarik untuk pengguna setia?", "time": "09:55", "date": "2025-09-26", "status": "sent"},
+            {"sender": "admin", "message": "Tentu, Bapak! Kami ada program poin reward. Mau detailnya?", "time": "09:57", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 86,
+        "name": "Tania Safira",
+        "message": "Perlu ganti email.",
+        "time": "09.40 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=56",
+        "assignedTo": "other",
+        "assignedByName": "Tiara",
+        "isRead": true,
+        "status": "closed",
+        "date": "2025-09-25T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Saya perlu ganti email untuk akun saya.", "time": "09:40", "date": "2025-09-25", "status": "read"},
+            {"sender": "admin", "message": "Baik, Ibu Tania. Mohon konfirmasi identitas Anda dulu.", "time": "09:42", "date": "2025-09-25", "status": "read"}
+        ]
+    },
+    {
+        "id": 89,
+        "name": "Wayan Setiawan",
+        "message": "Ada masalah dengan kupon.",
+        "time": "09.25 WIB",
+        "unread": 3,
+        "avatar": "https://i.pravatar.cc/150?img=59",
+        "assignedTo": "other",
+        "assignedByName": "Kinara",
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-24T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Kupon saya tidak bisa digunakan. Ada masalah dengan kupon.", "time": "09:25", "date": "2024-09-24", "status": "sent"},
+            {"sender": "admin", "message": "Mohon maaf, Bapak. Kupon tersebut hanya berlaku untuk produk tertentu.", "time": "09:27", "date": "2024-09-24", "status": "sent"}
+        ]
+    },
+    {
+        "id": 91,
+        "name": "Reza Akbar",
+        "message": "Minta info rekening bank.",
+        "time": "09.15 WIB",
+        "unread": 4,
+        "avatar": "https://i.pravatar.cc/150?img=61",
+        "assignedTo": "other",
+        "assignedByName": "Tiara",
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Minta info rekening bank untuk pembayaran manual.", "time": "09:15", "date": "2025-09-26", "status": "sent"},
+            {"sender": "admin", "message": "Rekening tujuan kami adalah BCA 12345678 a/n Jumpapay. Mohon kirim bukti transfer.", "time": "09:17", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 92,
+        "name": "Sari Lestari",
+        "message": "Saya butuh file PDF.",
+        "time": "09.10 WIB",
+        "unread": 2,
+        "avatar": "https://i.pravatar.cc/150?img=62",
+        "assignedTo": "other",
+        "assignedByName": "Kinara",
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Saya butuh file PDF panduan penggunaan.", "time": "09:10", "date": "2025-09-26", "status": "sent"},
+            {"sender": "admin", "message": "Tentu, Ibu Sari. Kami kirimkan linknya. Mohon dicek.", "time": "09:12", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 93,
+        "name": "Tegar Aji",
+        "message": "Halo admin, saya mau tanya.",
+        "time": "09.05 WIB",
+        "unread": 1,
+        "avatar": "https://i.pravatar.cc/150?img=63",
+        "assignedTo": "other",
+        "assignedByName": "Tiara",
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Halo admin, saya mau tanya tentang status langganan saya.", "time": "09:05", "date": "2025-09-26", "status": "sent"},
+            {"sender": "admin", "message": "Selamat pagi, Bapak Tegar. Langganan Anda aktif sampai akhir bulan ini.", "time": "09:07", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 94,
+        "name": "Ucok Siregar",
+        "message": "Saya tidak sengaja menutup aplikasi.",
+        "time": "09.00 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=64",
+        "assignedTo": "other",
+        "assignedByName": "Kinara",
+        "isRead": true,
+        "status": "closed",
+        "date": "2025-09-25T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Maaf, saya tidak sengaja menutup aplikasi saat proses pembayaran.", "time": "09:00", "date": "2025-09-25", "status": "read"},
+            {"sender": "admin", "message": "Tidak masalah, Bapak. Transaksi Anda masih aman, mohon cek di menu 'Pembayaran Tertunda'.", "time": "09:02", "date": "2025-09-25", "status": "read"}
+        ]
+    },
+    {
+        "id": 95,
+        "name": "Vero Samosir",
+        "message": "Apakah bisa perpanjang langganan?",
+        "time": "08.55 WIB",
+        "unread": 3,
+        "avatar": "https://i.pravatar.cc/150?img=65",
+        "assignedTo": "other",
+        "assignedByName": "Tiara",
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Apakah bisa perpanjang langganan yang sudah habis bulan lalu?", "time": "08:55", "date": "2025-09-26", "status": "sent"},
+            {"sender": "admin", "message": "Tentu, Ibu. Anda bisa perpanjang via aplikasi atau kami kirim link pembayaran di sini.", "time": "08:57", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 96,
+        "name": "Wulan Ayu",
+        "message": "Saya coba lagi nanti.",
+        "time": "08.50 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=66",
+        "assignedTo": "other",
+        "assignedByName": "Kinara",
+        "isRead": true,
+        "status": "closed",
+        "date": "2025-09-24T12:00:00Z",
+        "history": [
+            {"sender": "admin", "message": "Ada yang bisa kami bantu lagi, Ibu?", "time": "08:48", "date": "2024-09-24", "status": "read"},
+            {"sender": "customer", "message": "Tidak, terima kasih. Saya coba lagi nanti.", "time": "08:50", "date": "2024-09-24", "status": "read"}
+        ]
+    },
+    {
+        "id": 97,
+        "name": "Yayan Ruhian",
+        "message": "Mohon info jam kerja.",
+        "time": "08.45 WIB",
+        "unread": 1,
+        "avatar": "https://i.pravatar.cc/150?img=67",
+        "assignedTo": "other",
+        "assignedByName": "Tiara",
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Mohon info jam kerja Jumpapay.", "time": "08:45", "date": "2025-09-26", "status": "sent"},
+            {"sender": "admin", "message": "Kami beroperasi dari jam 08.00 hingga 17.00 WIB setiap hari kerja.", "time": "08:47", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 98,
+        "name": "Zian Azhari",
+        "message": "Ini pesan otomatis?",
+        "time": "08.40 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=68",
+        "assignedTo": "other",
+        "assignedByName": "Kinara",
+        "isRead": true,
+        "status": "closed",
+        "date": "2025-09-25T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Ini pesan otomatis ya? Saya butuh bicara dengan manusia.", "time": "08:40", "date": "2025-09-25", "status": "read"},
+            {"sender": "admin", "message": "Selamat pagi, Bapak Zian. Saya admin Kinara, siap membantu Anda.", "time": "08:42", "date": "2025-09-25", "status": "read"}
+        ]
+    },
+    {
+        "id": 99,
+        "name": "Ariana Grande",
+        "message": "Saya tunggu balasan Anda.",
+        "time": "08.35 WIB",
+        "unread": 2,
+        "avatar": "https://i.pravatar.cc/150?img=69",
+        "assignedTo": "other",
+        "assignedByName": "Tiara",
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Saya sudah kirim detail, saya tunggu balasan Anda.", "time": "08:35", "date": "2025-09-26", "status": "sent"},
+            {"sender": "admin", "message": "Terima kasih, Ibu Ariana. Kami sedang mengecek. Mohon tunggu 1-2 menit.", "time": "08:37", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 100,
+        "name": "Bruno Mars",
+        "message": "Masalah di proses pendaftaran.",
+        "time": "08.30 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=70",
+        "assignedTo": "other",
+        "assignedByName": "Kinara",
+        "isRead": true,
+        "status": "closed",
+        "date": "2025-09-24T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Saya ada masalah di proses pendaftaran. Gagal terus.", "time": "08:30", "date": "2024-09-24", "status": "read"},
+            {"sender": "admin", "message": "Mohon maaf, Bapak. Pastikan semua kolom terisi dengan benar. Apakah ada pesan error?", "time": "08:32", "date": "2024-09-24", "status": "read"}
+        ]
+    },
+    {
+        "id": 101,
+        "name": "Chris Evans",
+        "message": "Perlu info diskon.",
+        "time": "08.25 WIB",
+        "unread": 1,
+        "avatar": "https://i.pravatar.cc/150?img=1",
+        "assignedTo": "other",
+        "assignedByName": "Tiara",
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Perlu info diskon untuk produk X.", "time": "08:25", "date": "2025-09-26", "status": "sent"},
+            {"sender": "admin", "message": "Untuk produk X ada diskon 10% jika pembayaran dilakukan via e-wallet.", "time": "08:27", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 102,
+        "name": "Dwayne Johnson",
+        "message": "Halo, apakah ini dengan Jumpapay?",
+        "time": "08.20 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=2",
+        "assignedTo": "other",
+        "assignedByName": "Kinara",
+        "isRead": true,
+        "status": "closed",
+        "date": "2025-09-25T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Halo, apakah ini dengan Jumpapay?", "time": "08:20", "date": "2025-09-25", "status": "read"},
+            {"sender": "admin", "message": "Betul, Bapak Dwayne. Ada yang bisa dibantu hari ini?", "time": "08:22", "date": "2025-09-25", "status": "read"}
+        ]
+    },
+    {
+        "id": 103,
+        "name": "Emma Watson",
+        "message": "Bagaimana cara membatalkan pesanan?",
+        "time": "08.15 WIB",
+        "unread": 3,
+        "avatar": "https://i.pravatar.cc/150?img=3",
+        "assignedTo": "other",
+        "assignedByName": "Tiara",
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Bagaimana cara membatalkan pesanan ID 9012?", "time": "08:15", "date": "2025-09-26", "status": "sent"},
+            {"sender": "admin", "message": "Pembatalan bisa dilakukan jika status pesanan belum 'Diproses'. Mohon cek statusnya, Ibu Emma.", "time": "08:17", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Rania Anjani",
+        "message": "Halo, apakah ini dengan Jumpapay?",
+        "time": "11.44 WIB",
+        "unread": 3,
+        "avatar": "https://i.pravatar.cc/150?img=7",
+        "assignedTo": null,
+        "assignedByName": null,
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Halo, apakah ini dengan Jumpapay?", "time": "11:44", "date": "2025-09-26", "status": "sent"},
+            {"sender": "admin", "message": "Selamat pagi, betul. Mohon tunggu, kami carikan admin yang tersedia.", "time": "11:46", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Talita Putri",
+        "message": "Halo, apakah ini dengan Jumpapay?",
+        "time": "11.44 WIB",
+        "unread": 1,
+        "avatar": "https://i.pravatar.cc/150?img=8",
+        "assignedTo": null,
+        "assignedByName": null,
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Halo, apakah ini dengan Jumpapay?", "time": "11:44", "date": "2025-09-26", "status": "sent"},
+            {"sender": "admin", "message": "Betul, ini layanan pelanggan. Ada yang bisa kami bantu?", "time": "11:45", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Budi Hartono",
+        "message": "Bagaimana cara cek status pesanan?",
+        "time": "11.40 WIB",
+        "unread": 2,
+        "avatar": "https://i.pravatar.cc/150?img=9",
+        "assignedTo": null,
+        "assignedByName": null,
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Bagaimana cara cek status pesanan ID 6543?", "time": "11:40", "date": "2025-09-26", "status": "sent"},
+            {"sender": "admin", "message": "Anda dapat melihat status di menu 'Pesanan Saya'. Mohon ditunggu sebentar.", "time": "11:42", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Eva Lestari",
+        "message": "Apakah ada promo bulan ini?",
+        "time": "11.25 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=12",
+        "assignedTo": null,
+        "assignedByName": null,
+        "isRead": true,
+        "status": "closed",
+        "date": "2025-09-25T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Apakah ada promo bulan ini?", "time": "11:25", "date": "2025-09-25", "status": "read"},
+            {"sender": "admin", "message": "Ada, Bu. Cek banner utama di aplikasi. Ada diskon 20% untuk semua produk.", "time": "11:27", "date": "2025-09-25", "status": "read"}
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Hani Wijaya",
+        "message": "Ada kendala saat pembayaran.",
+        "time": "11.10 WIB",
+        "unread": 5,
+        "avatar": "https://i.pravatar.cc/150?img=15",
+        "assignedTo": null,
+        "assignedByName": null,
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Ada kendala saat pembayaran, muncul error code 404.", "time": "11:10", "date": "2025-09-26", "status": "sent"},
+            {"sender": "admin", "message": "Mohon maaf. Kami sedang perbaiki, coba ganti metode pembayaran lain sementara ini.", "time": "11:12", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 18,
+        "name": "Kartika Sari",
+        "message": "Sudah saya bayar, mohon dicek.",
+        "time": "10.55 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=18",
+        "assignedTo": null,
+        "assignedByName": null,
+        "isRead": true,
+        "status": "closed",
+        "date": "2025-09-25T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Sudah saya bayar via bank B, mohon dicek dan konfirmasi.", "time": "10:55", "date": "2025-09-25", "status": "read"},
+            {"sender": "admin", "message": "Pembayaran sudah kami terima, Ibu Kartika. Terima kasih.", "time": "10:57", "date": "2025-09-25", "status": "read"}
+        ]
+    },
+    {
+        "id": 121,
+        "name": "Liam Neeson",
+        "message": "Mohon info jam operasional.",
+        "time": "10.05 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=21",
+        "assignedTo": null,
+        "assignedByName": null,
+        "isRead": true,
+        "status": "closed",
+        "date": "2025-09-24T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Mohon info jam operasional CS.", "time": "10:05", "date": "2024-09-24", "status": "read"},
+            {"sender": "admin", "message": "Jam operasional kami 08.00 - 17.00 WIB. Ada yang bisa kami bantu sebelum itu?", "time": "10:07", "date": "2024-09-24", "status": "read"}
+        ]
+    },
+    {
+        "id": 122,
+        "name": "Nicole Kidman",
+        "message": "Apakah bisa ganti data?",
+        "time": "07.30 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=22",
+        "assignedTo": null,
+        "assignedByName": null,
+        "isRead": true,
+        "status": "closed",
+        "date": "2025-09-24T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Apakah bisa ganti data nama saya?", "time": "07:30", "date": "2024-09-24", "status": "read"},
+            {"sender": "admin", "message": "Ya, bisa. Mohon kirim foto KTP Anda dan detail nama yang benar.", "time": "07:32", "date": "2024-09-24", "status": "read"}
+        ]
+    },
+    {
+        "id": 123,
+        "name": "Orlando Bloom",
+        "message": "Perlu verifikasi akun.",
+        "time": "07.25 WIB",
+        "unread": 1,
+        "avatar": "https://i.pravatar.cc/150?img=23",
+        "assignedTo": null,
+        "assignedByName": null,
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Perlu verifikasi akun premium saya.", "time": "07:25", "date": "2025-09-26", "status": "sent"},
+            {"sender": "admin", "message": "Baik, Bapak. Kami sedang proses. Maksimal 1x24 jam.", "time": "07:27", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 124,
+        "name": "Penelope Cruz",
+        "message": "Perlu dicek kembali.",
+        "time": "07.20 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=24",
+        "assignedTo": null,
+        "assignedByName": null,
+        "isRead": true,
+        "status": "closed",
+        "date": "2025-09-25T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Mohon dicek kembali tagihan saya. Sepertinya ada kesalahan.", "time": "07:20", "date": "2025-09-25", "status": "read"},
+            {"sender": "admin", "message": "Kami sudah koreksi, Ibu Penelope. Mohon dicek kembali. Terima kasih.", "time": "07:22", "date": "2025-09-25", "status": "read"}
+        ]
+    },
+    {
+        "id": 125,
+        "name": "Quincy Jones",
+        "message": "Kapan bisa dihubungi?",
+        "time": "07.15 WIB",
+        "unread": 2,
+        "avatar": "https://i.pravatar.cc/150?img=25",
+        "assignedTo": null,
+        "assignedByName": null,
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Saya butuh bicara via telepon. Kapan bisa dihubungi?", "time": "07:15", "date": "2025-09-26", "status": "sent"},
+            {"sender": "admin", "message": "Kami akan hubungi Anda dalam 10 menit ke depan, Bapak.", "time": "07:17", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 126,
+        "name": "Robert Downey Jr.",
+        "message": "Mohon info terbaru.",
+        "time": "07.10 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=26",
+        "assignedTo": null,
+        "assignedByName": null,
+        "isRead": true,
+        "status": "closed",
+        "date": "2025-09-24T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Mohon info terbaru mengenai event bulan depan.", "time": "07:10", "date": "2024-09-24", "status": "read"},
+            {"sender": "admin", "message": "Event akan diadakan tanggal 15 Oktober. Detail akan kami kirim via notifikasi.", "time": "07:12", "date": "2024-09-24", "status": "read"}
+        ]
+    },
+    {
+        "id": 127,
+        "name": "Scarlett J.",
+        "message": "Ada masalah dengan sistem.",
+        "time": "07.05 WIB",
+        "unread": 1,
+        "avatar": "https://i.pravatar.cc/150?img=27",
+        "assignedTo": null,
+        "assignedByName": null,
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Ada masalah dengan sistem. Aplikasi sering *crash*.", "time": "07:05", "date": "2025-09-26", "status": "sent"},
+            {"sender": "admin", "message": "Mohon maaf. Tim teknis sedang mengidentifikasi masalah ini. Kami segera perbaiki.", "time": "07:07", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 128,
+        "name": "Tom Hanks",
+        "message": "Saya tunggu konfirmasi.",
+        "time": "07.00 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=28",
+        "assignedTo": null,
+        "assignedByName": null,
+        "isRead": true,
+        "status": "closed",
+        "date": "2025-09-25T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Saya tunggu konfirmasi pengiriman pesanan.", "time": "07:00", "date": "2025-09-25", "status": "read"},
+            {"sender": "admin", "message": "Pesanan Anda sudah dikirim, Bapak Tom. Nomor resi sudah dikirim ke email.", "time": "07:02", "date": "2025-09-25", "status": "read"}
+        ]
+    },
+    {
+        "id": 129,
+        "name": "Uma Thurman",
+        "message": "Halo, admin.",
+        "time": "06.55 WIB",
+        "unread": 3,
+        "avatar": "https://i.pravatar.cc/150?img=29",
+        "assignedTo": null,
+        "assignedByName": null,
+        "isRead": false,
+        "status": "active",
+        "date": "2025-09-26T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Halo, admin. Saya ada pertanyaan serius.", "time": "06:55", "date": "2025-09-26", "status": "sent"},
+            {"sender": "admin", "message": "Selamat pagi, Ibu Uma. Kami siap mendengarkan. Silakan sampaikan.", "time": "06:57", "date": "2025-09-26", "status": "sent"}
+        ]
+    },
+    {
+        "id": 130,
+        "name": "Vin Diesel",
+        "message": "Cek pesan saya ya.",
+        "time": "06.50 WIB",
+        "unread": 0,
+        "avatar": "https://i.pravatar.cc/150?img=30",
+        "assignedTo": null,
+        "assignedByName": null,
+        "isRead": true,
+        "status": "closed",
+        "date": "2025-09-24T12:00:00Z",
+        "history": [
+            {"sender": "customer", "message": "Saya sudah kirim tangkapan layar. Cek pesan saya ya.", "time": "06:50", "date": "2024-09-24", "status": "read"},
+            {"sender": "admin", "message": "Baik, sudah kami terima. Masalah sedang dianalisis.", "time": "06:52", "date": "2024-09-24", "status": "read"}
+        ]
+    }
+]
